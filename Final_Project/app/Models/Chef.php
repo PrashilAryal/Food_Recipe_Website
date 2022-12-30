@@ -9,4 +9,8 @@ class Chef extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'photo', 'email', 'password'];
+
+    public function recipes(){
+        return $this->hasMany(Recipe::class);
+    }
 }

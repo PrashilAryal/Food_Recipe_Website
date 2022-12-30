@@ -2,5 +2,4 @@
 
 @section('content')
 <!-- homepage code here -->
-
 @endsection

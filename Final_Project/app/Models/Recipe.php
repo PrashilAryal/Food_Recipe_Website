@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Recipe extends Model
 {
     use HasFactory;
+
+    public function chef(){
+        return $this->belongsTo(Chef::class);
+    }
 }

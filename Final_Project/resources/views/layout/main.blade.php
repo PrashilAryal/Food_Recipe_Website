@@ -35,7 +35,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                                <li><a class="dropdown-item" href="{{route('register')}}">Register a new Account</a></li>
+                                <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>

@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('cssfiles/footer.css')}}">
     <title>Chef's Kitchen</title>
-    <link rel="icon" href="img/core-img/favicon.ico">
 
+    <link rel="icon" href="{{ asset('../image/icon.png')}}" type="image/png">
+    <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
     @vite(['resources/js/app.js'])
 </head>
@@ -17,9 +21,9 @@
 <body>
     <!-- Navbar code here -->
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Code D Evil</a>
+            <img class="navbar-brand" src="{{ asset('../image/logo.png') }}" alt="">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -30,15 +34,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-
-
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Recipie List</a>
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Recipe</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                            Are you a chef?
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
@@ -51,8 +59,8 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Search recipe..." aria-label="Search">
+                    <button class="btn-search" type="submit">Search</button>
                 </form>
             </div>
         </div>

@@ -90,7 +90,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-heading">
-                    <h3>The Best Receipies</h3>
+                    <h3>The Best Recipes</h3>
                 </div>
             </div>
         </div>
@@ -184,4 +184,22 @@
 </section>
 <!-- ##### Best Receipe Area End ##### -->
 
+<!-- ##### VEG Area Start ##### -->
+<section class="veg-area bg-img bg-overlay" style="background-image: url('../image/bg4.jpg');">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <!-- veg Content -->
+                <div class="veg-content text-center">
+                    <h2>Veg Recipes</h2>
+                    <p>A vegetarian diet does not include any meat, poultry, or seafood. It is a meal plan made up of
+                        foods that come mostly from plants. A well-planned vegetarian diet can meet your nutrition
+                        needs. Reducing the amount of meat in your diet may improve your health.</p>
+                    <a href="#" class="chef-btn">Discover veg dishes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### CTA Area End ##### -->
 @endsection

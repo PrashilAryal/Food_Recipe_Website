@@ -13,6 +13,111 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Spacing */
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-70 {
+    margin-top: 70px !important;
+}
+
+.mt-100 {
+    margin-top: 100px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mb-70 {
+    margin-bottom: 70px !important;
+}
+
+.mb-80 {
+    margin-bottom: 80px !important;
+}
+
+.mb-100 {
+    margin-bottom: 100px !important;
+}
+
+.ml-15 {
+    margin-left: 15px !important;
+}
+
+.ml-30 {
+    margin-left: 30px !important;
+}
+
+.ml-50 {
+    margin-left: 50px !important;
+}
+
+.mr-15 {
+    margin-right: 15px !important;
+}
+
+.mr-30 {
+    margin-right: 30px !important;
+}
+
+.mr-50 {
+    margin-right: 50px !important;
+}
+
+/* Height */
+.height-400 {
+    height: 400px !important;
+}
+
+.height-500 {
+    height: 500px !important;
+}
+
+.height-600 {
+    height: 600px !important;
+}
+
+.height-700 {
+    height: 700px !important;
+}
+
+.height-800 {
+    height: 800px !important;
+}
+/* Section Padding */
+.section-padding-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-padding-80-0 {
+    padding-top: 80px;
+    padding-bottom: 0;
+}
+
+.section-padding-0-80 {
+    padding-top: 0;
+    padding-bottom: 80px;
+}
+
 /* NAVBAR */
 .navbar .nav-item {
     color: white;
@@ -47,8 +152,10 @@ body {
 .container {
     height: 100%;
     width: 100%;
-    background-color: #eef2e6;
     margin: 30px;
+}
+.heroSection {
+    background-color: #eef2e6;
 }
 .heroArea {
     align-content: center;
@@ -147,4 +254,128 @@ body {
 .slideUp {
     -webkit-animation: slideUp 2s ease;
     animation: slideUp 2s ease;
+}
+
+/* button */
+.chef-btn {
+    background: green;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.chef-btn:hover {
+    background: #376e4e;
+    color: white;
+}
+
+/* Section Heading */
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.section-heading h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.section-heading.text-left {
+    text-align: left !important;
+}
+.section-heading.white h3 {
+    color: #ffffff;
+}
+
+/* single top category */
+.single-top-catagory {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 80px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    overflow: hidden;
+}
+.single-top-catagory img {
+    width: 100%;
+}
+.single-top-catagory::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    background: -webkit-linear-gradient(to right, #000, rgba(0, 0, 0, 0.1));
+    background: linear-gradient(to right, #000, rgba(0, 0, 0, 0.1));
+}
+.single-top-catagory .top-cta-content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.single-top-catagory .top-cta-content h3 {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: 767px) {
+    .single-top-catagory .top-cta-content h3 {
+        font-size: 18px;
+    }
+}
+.single-top-catagory .top-cta-content h6 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    display: block;
+    font-weight: 400;
+}
+@media only screen and (max-width: 767px) {
+    .single-top-catagory .top-cta-content h6 {
+        margin-bottom: 10px;
+    }
+}
+
+/* Best Receipe Area */
+.best-receipe-area {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+}
+
+.single-best-receipe-area {
+    position: relative;
+    z-index: 1;
+}
+.single-best-receipe-area img {
+    border-bottom: 3px solid #40ba37;
+}
+.single-best-receipe-area .receipe-content {
+    padding-top: 30px;
+    text-align: center;
+}
+.single-best-receipe-area .receipe-content h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+.single-best-receipe-area .receipe-content a {
+    color: black;
+    text-decoration: none;
+}
+.single-best-receipe-area .receipe-content h5:hover,
+.single-best-receipe-area .receipe-content h5:focus {
+    color: #40ba37;
 }

@@ -47,8 +47,141 @@
 			right-0
 			lg:
 			-bottom-28
-			lg:-right-36
+			lg:-right-0
 		  "></div>
 </section>
+
+<!-- ##### Top Catagory Area Start ##### -->
+<section class="top-catagory-area section-padding-80-0">
+    <div class="container">
+        <div class="row">
+            <!-- Top Catagory Area -->
+            <div class="col-12 col-lg-6">
+                <div class="single-top-catagory">
+                    <img src="{{ asset('../image/bg2.jpg') }}" alt="">
+                    <!-- Content -->
+                    <div class="top-cta-content">
+                        <h3>Strawberry Cake</h3>
+                        <h6>Simple &amp; Delicios</h6>
+                        <a href="receipe-post.html" class="chef-btn">See Full Receipe</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Catagory Area -->
+            <div class="col-12 col-lg-6">
+                <div class="single-top-catagory">
+                    <img src="{{ asset('../image/bg3.jpg') }}" alt="">
+                    <!-- Content -->
+                    <div class="top-cta-content">
+                        <h3>Chinesse Noodles</h3>
+                        <h6>Simple &amp; Delicios</h6>
+                        <a href="receipe-post.html" class="chef-btn">See Full Receipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Top Catagory Area End ##### -->
+
+<!-- ##### Best Receipe Area Start ##### -->
+<section class="best-receipe-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h3>The Best Receipies</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{ asset('../image/r1.jpg') }}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>Sushi Easy Receipy</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{ asset('../image/r2.jpg') }}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>Homemade Burger</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{ asset('../image/r3.jpg') }}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>Vegan Smoothie</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{ asset('../image/r4.jpg') }}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>Calabasa soup</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{ asset('../image/r5.jpg') }}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>Homemade Breakfast</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Best Receipe Area -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{ asset('../image/r6.jpg') }}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>Healthy Fruit Desert</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Best Receipe Area End ##### -->
 
 @endsection

@@ -477,3 +477,42 @@ body {
         margin-bottom: 50px;
     }
 }
+
+/* Quote Area */
+.quoteArea {
+    margin-top: 40px;
+    padding: 10px;
+}
+.quote-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.quote-area {
+    position: relative;
+    z-index: 1;
+    border-bottom: 3px solid green;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    width: 50%;
+    background-color: #eef2e6;
+}
+.quote-area h4 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .quote-area h4 {
+        font-size: 20px;
+    }
+}
+.quote-area p {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 40px;
+}

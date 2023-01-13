@@ -201,5 +201,23 @@
         </div>
     </div>
 </section>
-<!-- ##### CTA Area End ##### -->
+<!-- ##### VEG Area End ##### -->
+
+<!-- ##### Quotes Area Start ##### -->
+<section class="quoteArea">
+    <div class="quote-item">
+        <div class="quote-area text-center">
+            <h4><q>A recipe has no soul. You as the cook must bring soul to the recipe.</q></h4>
+            <p>- Thomas Keller</p>
+        </div>
+    </div>
+    <div class="quote-item">
+        <div class="quote-area text-center">
+            <h4><q>Cooking is like love. It should be entered into with abandon or not at all.</q></h4>
+            <p>- Harriet Van Horne</p>
+        </div>
+    </div>
+</section>
+<!-- ##### Quotes Area End ##### -->
+
 @endsection

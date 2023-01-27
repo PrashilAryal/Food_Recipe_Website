@@ -10,6 +10,7 @@
     <link rel="icon" href="{{ asset('../image/icon.png')}}" type="image/png">
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript"

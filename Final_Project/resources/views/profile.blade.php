@@ -13,27 +13,43 @@
 
     <div class="profileContainer">
         <div class="profileSettings">
-            <p>Edit profile</p>
+            <p>Settings</p>
+            <p>You can edit:</p>
+            <ul>
+                <li>Name</li>
+                <li>Password</li>
+                <li>Email</li>
+                <li>Location</li>
+            </ul>
         </div>
         <div class="profileBody">
             <div class="addRecipe">
-                <form action="" method="">
-                    <label for="">Dish Name</label>
-                    <input type="text" name="name"><br>
-                    <label for="">Photo</label>
-                    <input type="text" name="photo"><br>
-                    <label for="">Ingredients</label>
-                    <input type="text" name="ingredients"><br>
-                    <label for="">Description</label>
-                    <input type="text" name="description"><br>
-                    <label for="">Time to cook</label>
-                    <input type="text" name="cooking_time"><br>
-                    <button type="submit">Add Recipe</button>
-                </form>
+                <form>
+                    <div class="add_recipe_form">
+                        <div class="add_recipe_form-heading">Add a recipe</div>
+                        <form action="" method="post">
+                            <label><span>Dish Name </span><input type="text" class="input-field" name="dish_name"
+                                    placeholder="Enter dish name" /></label>
+                            <label><span>Photo </span><input type="file" class="input-field"
+                                    name="dish_photo" /></label>
+                            <label><span>Ingredients </span><input type="text" class="input-field" name="ingredients"
+                                    placeholder="Enter ingredients needed" /></label>
+                            <label><span>Time to cook </span><input type="text" class="input-field" name="cooking_time"
+                                    placeholder="Enter average time to cook" /></label>
+                            <label><span>Category</span><select name="category" class="select-field">
+                                    <option value="" disabled selected>Choose dish type</option>
+                                    <option value="non_veg">Non-veg</option>
+                                    <option value="veg">Veg</option>
+                                </select></label>
+                            <label><span>Description </span><textarea name="description" class="textarea-field"
+                                    placeholder="Enter way to cook"></textarea></label>
+                            <button class="chef-btn">Add Recipe</button>
+                        </form>
 
-            </div>
-            <div class="oldRecord">
+                    </div>
+                    <div class="oldRecord">
 
+                    </div>
             </div>
         </div>
         <div class="otherDetails">
@@ -51,5 +67,4 @@
             </ul>
         </div>
     </div>
-</div>
-@endsection
+    @endsection

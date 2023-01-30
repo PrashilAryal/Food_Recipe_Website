@@ -1,10 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 .profilePhotos {
     width: 100%;
     justify-content: center;
-    background-color: #eef2e6;
 }
 #coverPhoto {
-    width: 95%;
+    width: 98%;
     height: 500px;
     display: block;
     margin-left: auto;
@@ -24,7 +26,6 @@
 .profile {
     display: flex;
     align-items: center;
-    background-color: #eef2e6;
 }
 .profile > span {
     padding-left: 10px;
@@ -35,20 +36,82 @@
 .profileContainer {
     display: flex;
     flex-wrap: wrap;
-    font-size: 30px;
-    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
 }
 .profileSettings {
-    background-color: dodgerblue;
+    border-right: 3px solid #eef2e6;
     padding: 10px;
     flex: 20%;
+}
+.addRecipe {
+    padding: 10px;
+    background-color: #f3f4f2;
+    border-radius: 15px;
 }
 .profileBody {
     padding: 10px;
     flex: 50%;
 }
 .otherDetails {
-    background-color: dodgerblue;
+    border-left: 3px solid #eef2e6;
     padding: 10px;
     flex: 20%;
+}
+
+.add_recipe_form {
+    max-width: 100%;
+    padding: 20px 12px 10px 20px;
+    font: 15px Arial, Helvetica, sans-serif;
+}
+.add_recipe_form-heading {
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-bottom: 3px;
+    text-align: center;
+    color: green;
+}
+.add_recipe_form label {
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.add_recipe_form label > span {
+    width: 200px;
+    font-weight: 500;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+.add_recipe_form input.input-field,
+.add_recipe_form .select-field {
+    width: 70%;
+}
+.add_recipe_form input.input-field,
+.add_recipe_form .textarea-field,
+.add_recipe_form .select-field {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: white;
+    border: 2px solid white;
+    box-shadow: 1px 1px 3px green;
+    -moz-box-shadow: 1px 1px 3px green;
+    -webkit-box-shadow: 1px 1px 3px green;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 7px;
+    outline: none;
+}
+.add_recipe_form .input-field:focus,
+.add_recipe_form .textarea-field:focus,
+.add_recipe_form .select-field:focus {
+    border: 2px solid green;
+}
+.add_recipe_form .textarea-field {
+    height: 100px;
+    width: 70%;
 }

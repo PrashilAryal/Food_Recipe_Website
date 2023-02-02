@@ -8,7 +8,7 @@
         {{Session::get('fail')}}
     </div>
 @endif --}}
-<form action="" method="POST" class="mx-auto col-6 border border-primary border-3 p-3">
+<form action="" method="POST" class="mx-auto col-6 border border-success border-3 p-3">
         @csrf
        
         <div class="mb-3">
@@ -21,6 +21,6 @@
             <input type="password" class="form-control" name="password">
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
     </form>
 @endsection

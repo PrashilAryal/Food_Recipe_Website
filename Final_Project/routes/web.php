@@ -18,3 +18,4 @@ Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 Route::get('/register', [HomeController::class, 'register'])->name('register');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/profile',[HomeController::class, 'profile'])->name('profile');
+Route::get('/about',[HomeController::class, 'about'])->name('AboutPage');

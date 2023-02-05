@@ -19,4 +19,7 @@ class HomeController extends Controller
     public function profile(){
         return view('profile');
     }
+    public function about(){
+        return view('about');
+    }
 }

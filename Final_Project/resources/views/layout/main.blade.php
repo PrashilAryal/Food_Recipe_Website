@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef's Kitchen</title>
-
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="icon" href="{{ asset('../image/icon.png')}}" type="image/png">
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/about.css')}}">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,7 +42,7 @@
                         <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('AboutPage')}}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Contact</a>

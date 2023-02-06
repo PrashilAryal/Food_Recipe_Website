@@ -41,9 +41,13 @@
 }
 .profileSettings {
     border-right: 3px solid #eef2e6;
+    border-right: 3px solid green;
     padding: 10px;
     flex: 20%;
+    max-width: 300px;
 }
+
+/* Form Area */
 .addRecipe {
     padding: 10px;
     background-color: #f3f4f2;
@@ -53,67 +57,154 @@
     padding: 10px;
     flex: 50%;
 }
+.addRecipeForm {
+    display: block;
+}
+.editProfileForm {
+    display: none;
+}
 .otherDetails {
     border-left: 3px solid #eef2e6;
     padding: 10px;
     flex: 20%;
+    margin-top: 25px;
 }
 
-.add_recipe_form {
-    max-width: 100%;
-    padding: 20px 12px 10px 20px;
-    font: 15px Arial, Helvetica, sans-serif;
+/* Add Recipe Form */
+.addRecipeForm {
+    font: 95% Arial, Helvetica, sans-serif;
+    margin: 10px auto;
+    padding: 16px;
 }
-.add_recipe_form-heading {
-    font-weight: bold;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
-    font-size: 20px;
-    padding-bottom: 3px;
+.addRecipeForm div {
+    text-align: center;
+}
+.addRecipeForm h1 {
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 500;
     text-align: center;
     color: green;
+    margin: -16px -16px 16px -16px;
 }
-.add_recipe_form label {
-    display: block;
-    margin: 0px 0px 15px 0px;
-}
-.add_recipe_form label > span {
-    width: 200px;
-    font-weight: 500;
-    float: left;
-    padding-top: 8px;
-    padding-right: 5px;
-}
-
-.add_recipe_form input.input-field,
-.add_recipe_form .select-field {
-    width: 70%;
-}
-.add_recipe_form input.input-field,
-.add_recipe_form .textarea-field,
-.add_recipe_form .select-field {
+.addRecipeForm input[type="text"],
+.addRecipeForm input[type="date"],
+.addRecipeForm input[type="datetime"],
+.addRecipeForm input[type="email"],
+.addRecipeForm input[type="number"],
+.addRecipeForm input[type="search"],
+.addRecipeForm input[type="time"],
+.addRecipeForm input[type="url"],
+.addRecipeForm input[type="file"],
+.addRecipeForm textarea,
+.addRecipeForm select {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    outline: none;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background-color: white;
-    border: 2px solid white;
-    box-shadow: 1px 1px 3px green;
-    -moz-box-shadow: 1px 1px 3px green;
-    -webkit-box-shadow: 1px 1px 3px green;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    padding: 7px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 3%;
+    padding: 10px;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+.addRecipeForm input[type="text"]:focus,
+.addRecipeForm input[type="date"]:focus,
+.addRecipeForm input[type="datetime"]:focus,
+.addRecipeForm input[type="email"]:focus,
+.addRecipeForm input[type="number"]:focus,
+.addRecipeForm input[type="search"]:focus,
+.addRecipeForm input[type="time"]:focus,
+.addRecipeForm input[type="url"]:focus,
+.addRecipeForm input[type="file"]:focus,
+.addRecipeForm textarea:focus,
+.addRecipeForm select:focus {
+    box-shadow: 0 0 5px green;
+    padding: 10px;
+    border: 1px solid #43d1af;
+}
+
+/* Edit Profile Form */
+.editProfileForm {
+    font: 95% Arial, Helvetica, sans-serif;
+    margin: 10px auto;
+    padding: 16px;
+}
+.editProfileForm div {
+    text-align: center;
+}
+.editProfileForm h1 {
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 500;
+    text-align: center;
+    color: green;
+    margin: -16px -16px 16px -16px;
+}
+.editProfileForm input[type="text"],
+.editProfileForm input[type="date"],
+.editProfileForm input[type="datetime"],
+.editProfileForm input[type="email"],
+.editProfileForm input[type="number"],
+.editProfileForm input[type="search"],
+.editProfileForm input[type="time"],
+.editProfileForm input[type="url"],
+.editProfileForm input[type="file"],
+.editProfileForm textarea,
+.editProfileForm select {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 3%;
+    padding: 10px;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
 }
-.add_recipe_form .input-field:focus,
-.add_recipe_form .textarea-field:focus,
-.add_recipe_form .select-field:focus {
-    border: 2px solid green;
+.editProfileForm input[type="text"]:focus,
+.editProfileForm input[type="date"]:focus,
+.editProfileForm input[type="datetime"]:focus,
+.editProfileForm input[type="email"]:focus,
+.editProfileForm input[type="number"]:focus,
+.editProfileForm input[type="search"]:focus,
+.editProfileForm input[type="time"]:focus,
+.editProfileForm input[type="url"]:focus,
+.editProfileForm input[type="file"]:focus,
+.editProfileForm textarea:focus,
+.editProfileForm select:focus {
+    box-shadow: 0 0 5px green;
+    padding: 10px;
+    border: 1px solid #43d1af;
 }
-.add_recipe_form .textarea-field {
-    height: 100px;
-    width: 70%;
+
+.setting-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #eef2e6;
+    border-radius: 10px;
+    color: green;
+    margin-right: 0px;
+}
+.setting-btn:hover {
+    background-color: green;
+    color: #f3f4f2;
 }
 
 /* Old Recipes Post - My Recent Posts*/
@@ -123,7 +214,6 @@
     align-items: center;
     flex-direction: column;
     padding: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .post_heading {
     display: flex;
@@ -140,18 +230,17 @@
     font-weight: 600;
 }
 .post_container {
+    background-color: #f3f4f2;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0px;
     flex-wrap: wrap;
+    width: 70%;
 }
 .post_box {
-    /* width: 350px; */
     background-color: #ffffff;
-    border: 1px solid green;
-    border: 2px solid white;
-    box-shadow: 1px 1px 3px black;
+    width: 50%;
     margin: 20px;
 }
 .post_img {

@@ -13,78 +13,98 @@
 
     <div class="profileContainer">
         <div class="profileSettings">
-            <p>Settings</p>
-            <p>You can edit:</p>
-            <ul>
-                <li>Name</li>
-                <li>Password</li>
-                <li>Email</li>
-                <li>Location</li>
-            </ul>
+            <button id="settingBtn" class="setting-btn">Edit Profile</button>
+            <div class="otherDetails">
+                <h3>Personal Info.</h3>
+                <ul>
+                    <li>Name:</li>
+                    <li>Email:</li>
+                    <li>Address:</li>
+                    <li>Total recipes: </li>
+                </ul>
+            </div>
         </div>
         <div class="profileBody">
             <div class="addRecipe">
-                <form>
-                    <div class="add_recipe_form">
-                        <div class="add_recipe_form-heading">Add a recipe</div>
-                        <form action="" method="post">
-                            <label><span>Dish Name </span><input type="text" class="input-field" name="dish_name"
-                                    placeholder="Enter dish name" /></label>
-                            <label><span>Photo </span><input type="file" class="input-field"
-                                    name="dish_photo" /></label>
-                            <label><span>Ingredients </span><input type="text" class="input-field" name="ingredients"
-                                    placeholder="Enter ingredients needed" /></label>
-                            <label><span>Time to cook </span><input type="text" class="input-field" name="cooking_time"
-                                    placeholder="Enter average time to cook" /></label>
-                            <label><span>Category</span><select name="category" class="select-field">
-                                    <option value="" disabled selected>Choose dish type</option>
-                                    <option value="non_veg">Non-veg</option>
-                                    <option value="veg">Veg</option>
-                                </select></label>
-                            <label><span>Description </span><textarea name="description" class="textarea-field"
-                                    placeholder="Enter way to cook"></textarea></label>
-                            <button class="chef-btn">Add Recipe</button>
-                        </form>
-
-                    </div>
+                <div class="addRecipeForm" id="addRecipeForm">
+                    <h1>Add Recipe</h1>
+                    <form>
+                        <select name="category" class="select-field">
+                            <option value="" disabled selected>Choose dish type</option>
+                            <option value="non_veg">Non-veg</option>
+                            <option value="veg">Veg</option>
+                        </select>
+                        <label for="">Dish Photo</label>
+                        <input type="file" name="dish_photo" placeholder="Choose dish photo" />
+                        <input type="text" name="dish_name" placeholder="Dish Name" />
+                        <input type="text" name="cooking_time" placeholder="Time to cook" />
+                        <input type="text" name="ingredients" placeholder="ingredients" />
+                        <textarea name="description" placeholder="Way to cook"></textarea>
+                        <div>
+                            <input type="submit" value="Add Recipe" class="chef-btn" />
+                        </div>
+                    </form>
+                </div>
+                <div class="editProfileForm" id="editProfileForm">
+                    <h1>Edit Profile</h1>
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" />
+                        <label for="">Profile Photo</label>
+                        <input type="file" name="profilePhoto" placeholder="Choose your profile photo" />
+                        <label for="">Cover Photo</label>
+                        <input type="file" name="coverPhoto" placeholder="Choose your cover photo" />
+                        <input type="email" name="email" placeholder="Email" />
+                        <input type="text" name="phone_no" placeholder="Phone number" />
+                        <input type="text" name="address" placeholder="Your address" />
+                        <div>
+                            <input type="submit" value="Save" class="chef-btn" />
+                        </div>
+                    </form>
+                </div>
 
             </div>
-            <section class="oldRecord">
-                <div class="post_heading">
-                    <span>My Recent Posts</span>
-                    <h3>My Recipes</h3>
-                </div>
-                <div class="post_container">
-                    <div class="post_box">
-                        <div class="post_img">
-                            <img src="{{ asset('../image/r6.jpg') }}" alt="">
-                        </div>
-                        <div class="post_text">
-                            <span>18 July 2021 / Breakfast</span>
-                            <a href="#" class="post_title">Click here to view full recipe</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio suscipit voluptas
-                                quisquam deleniti ducimus placeat reiciendis doloribus a alias impedit facilis porro
-                                nemo tempore quam, accusamus odio vitae? Officia, voluptatum.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
 
-            </section>
-        </div>
-        <div class="otherDetails">
-            <h3>Personal Info.</h3>
-            <ul>
-                <li>Name:</li>
-                <li>Email:</li>
-                <li>Address:</li>
-
-            </ul>
-            <h3>Extra</h3>
-            <ul>
-                <li>Recipe: </li>
-                <li></li>
-            </ul>
         </div>
     </div>
+    <section class="oldRecord">
+        <div class="post_heading">
+            <span>My Recent Posts</span>
+            <h3>My Recipes</h3>
+        </div>
+        <div class="post_container">
+            <div class="post_box">
+                <div class="post_img">
+                    <img src="{{ asset('../image/r6.jpg') }}" alt="">
+                </div>
+                <div class="post_text">
+                    <span>18 July 2021 / Breakfast</span>
+                    <a href="#" class="post_title">Click here to view full recipe</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio suscipit voluptas
+                        quisquam deleniti ducimus placeat reiciendis doloribus a alias impedit facilis porro
+                        nemo tempore quam, accusamus odio vitae? Officia, voluptatum.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script type="text/javascript">
+    const settingBtn = document.getElementById('settingBtn');
+    settingBtn.addEventListener('click', () => {
+        const edit = document.getElementById('editProfileForm');
+        const recipe = document.getElementById('addRecipeForm');
+
+        if (edit.style.display === 'none') {
+            edit.style.display = 'block';
+            recipe.style.display = 'none';
+            settingBtn.innerHTML = 'Add Recipe';
+
+        } else {
+            edit.style.display = 'none';
+            recipe.style.display = 'block';
+            settingBtn.innerHTML = 'Edit Profile';
+        }
+    });
+    </script>
+
     @endsection

@@ -47,10 +47,30 @@
                         </form>
 
                     </div>
-                    <div class="oldRecord">
 
-                    </div>
             </div>
+            <section class="oldRecord">
+                <div class="post_heading">
+                    <span>My Recent Posts</span>
+                    <h3>My Recipes</h3>
+                </div>
+                <div class="post_container">
+                    <div class="post_box">
+                        <div class="post_img">
+                            <img src="{{ asset('../image/r6.jpg') }}" alt="">
+                        </div>
+                        <div class="post_text">
+                            <span>18 July 2021 / Breakfast</span>
+                            <a href="#" class="post_title">Click here to view full recipe</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio suscipit voluptas
+                                quisquam deleniti ducimus placeat reiciendis doloribus a alias impedit facilis porro
+                                nemo tempore quam, accusamus odio vitae? Officia, voluptatum.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </div>
         <div class="otherDetails">
             <h3>Personal Info.</h3>

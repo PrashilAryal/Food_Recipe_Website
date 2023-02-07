@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-<h1 class="text-center">Login</h1>
+<h1 class="text-center mt-5">Login</h1>
 {{-- @if(Session::has('fail'))
     
     <div class="alert alert-danger" role="alert">
@@ -19,6 +19,10 @@
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" name="password">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="confirm">
+        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>

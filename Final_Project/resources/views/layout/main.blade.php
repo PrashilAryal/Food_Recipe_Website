@@ -26,7 +26,7 @@
 
 <body>
     <!-- Navbar code here -->
-        <div class="container-fluid mb-5">
+        <div class="">
 
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -37,7 +37,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
                     </li>
@@ -78,7 +78,7 @@
     </div>
 
   
-<div class="container-fluid mt-5">
+<div class="mt-5">
 
   <footer
           class="text-center text-lg-start text-white"
@@ -126,9 +126,9 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold">Chef's Kitchen</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Magnam, vero. Ullam ducimus maiores numquam veniam quas quasi voluptatem odio ea!
+            <p class="text-white">
+              Chef's Kitchen is optimized for the best cooking enthusiast's interests.
+              While using this site, you agree to have read and accepted our <a href="#">terms of use</a>, <a href="#">cookie and privacy policy.</a>
             </p>
           </div>
 
@@ -139,16 +139,16 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="#!" class="text-white">Prod1</a>
+              <a href="#!" class="text-white">Our Best Recipies</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Prod1</a>
+              <a href="#!" class="text-white">Veggie Products</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Prod1</a>
+              <a href="#!" class="text-white">Dairy Products</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Prod1</a>
+              <a href="#!" class="text-white">Chef's Recommendation</a>
             </p>
           </div>
          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -158,10 +158,10 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="#!" class="text-white">Your Account</a>
+              <a href="{{route('profile')}}" class="text-white">Your Account</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Act1</a>
+              <a href="{{route('AboutPage')}}" class="text-white">About Us</a>
             </p>
             <p>
               <a href="#!" class="text-white">Act1</a>
@@ -177,10 +177,10 @@
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
-            <p><i class="fas fa-home mr-3"></i> Kamalpokhari, 44600, Kathmandu</p>
-            <p><i class="fas fa-envelope mr-3"></i> ckitchenbusiness@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> +977 1234567</p>
-            <p><i class="fas fa-print mr-3"></i> +977 9818181818</p>
+            <p class="text-white"><i class="fas fa-home mr-3 "></i> Kamalpokhari, 44600, Kathmandu</p>
+            <p class="text-white"><i class="fas fa-envelope mr-3 "></i> ckitchenbusiness@gmail.com</p>
+            <p class="text-white"><i class="fas fa-phone mr-3 "></i> +977 1234567</p>
+            <p class="text-white"><i class="fas fa-print mr-3 "></i> +977 9818181818</p>
           </div>
         </div>
       </div>

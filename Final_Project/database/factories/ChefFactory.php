@@ -18,10 +18,14 @@ class ChefFactory extends Factory
     {
         return [
             //
-            'name' => $this->faker->name(),
-            'email' => $this->faker->email(),
-            'password' => $this->faker->text(10),
-            'photo' => $this->faker->text(30),
+            'chef_name' => $this->faker->name(),
+            'chef_email' => $this->faker->email(),
+            'chef_password' => $this->faker->text(10),
+            'chef_phone_num' => $this->faker->phoneNumber(10),
+            'chef_address' => $this->faker->text(10),
+            'chef_total_recipes' => $this->faker->numberBetween(1,10),
+            'chef_profile_photo' => $this->faker->text(30),
+            'chef_cover_photo' => $this->faker->text(30),
         ];
     }
 }

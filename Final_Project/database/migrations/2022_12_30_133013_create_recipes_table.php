@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Recipe;
 
 return new class extends Migration
 {
@@ -15,12 +16,14 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('photo');
-            $table->string('ingredients');
-            $table->string('description');
-            $table->string('cooking_time');
-            $table->unsignedBigInteger('chef_id');
+            $table->string('recipe_name');
+            $table->string('recipe_photo')->nullable();
+            $table->string('recipe_ingredients');
+            $table->string('recipe_description');
+            $table->string('recipe_steps');
+            $table->string('recipe_cooking_time');
+            $table->string('recipe_type');
+            $table->unsignedBigInteger('chef_id')->nullable();
             $table->foreign('chef_id')->references('id')->on('chefs')->onDelete('cascade');
             $table->timestamps();
         });

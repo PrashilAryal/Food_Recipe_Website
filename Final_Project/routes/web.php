@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/register', [HomeController::class, 'register'])->name('register');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/profile',[HomeController::class, 'profile'])->name('profile');
 Route::get('/about',[HomeController::class, 'about'])->name('AboutPage');
+
+Route::post('/save-recipe', [RecipeController::class, 'save_recipe'])->name('save_recipe');

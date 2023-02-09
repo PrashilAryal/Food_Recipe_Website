@@ -30,7 +30,7 @@
         <!-- Hero Image -->
         <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
             <img class="heroImage w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full fadeInRotate"
-                src="{{ asset('../image/hero-dish.png') }}" src="../image/hero-dish.png" alt="" />
+                src="{{ asset('../images/hero-dish.png') }}" src="../images/hero-dish.png" alt="" />
         </div>
     </div>
     <!-- Rounded Rectangle -->
@@ -58,7 +58,7 @@
             <!-- Top Catagory Area -->
             <div class="col-12 col-lg-6">
                 <div class="single-top-catagory">
-                    <img src="{{ asset('../image/bg2.jpg') }}" alt="">
+                    <img src="{{ asset('../images/bg2.jpg') }}" alt="">
                     <!-- Content -->
                     <div class="top-cta-content">
                         <h3>Strawberry Cake</h3>
@@ -70,7 +70,7 @@
             <!-- Top Catagory Area -->
             <div class="col-12 col-lg-6">
                 <div class="single-top-catagory">
-                    <img src="{{ asset('../image/bg3.jpg') }}" alt="">
+                    <img src="{{ asset('../images/bg3.jpg') }}" alt="">
                     <!-- Content -->
                     <div class="top-cta-content">
                         <h3>Chinesse Noodles</h3>
@@ -99,7 +99,7 @@
             <!-- Single Best Receipe Area -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../image/r1.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r1.jpg') }}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
                             <h5>Sushi Easy Receipy</h5>
@@ -113,7 +113,7 @@
             <!-- Single Best Receipe Area -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../image/r2.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r2.jpg') }}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
                             <h5>Homemade Burger</h5>
@@ -127,7 +127,7 @@
             <!-- Single Best Receipe Area -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../image/r3.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r3.jpg') }}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
                             <h5>Vegan Smoothie</h5>
@@ -141,7 +141,7 @@
             <!-- Single Best Receipe Area -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../image/r4.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r4.jpg') }}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
                             <h5>Calabasa soup</h5>
@@ -155,7 +155,7 @@
             <!-- Single Best Receipe Area -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../image/r5.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r5.jpg') }}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
                             <h5>Homemade Breakfast</h5>
@@ -169,7 +169,7 @@
             <!-- Single Best Receipe Area -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../image/r6.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r6.jpg') }}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
                             <h5>Healthy Fruit Desert</h5>
@@ -185,7 +185,7 @@
 <!-- ##### Best Receipe Area End ##### -->
 
 <!-- ##### VEG Area Start ##### -->
-<section class="veg-area bg-img bg-overlay" style="background-image: url('../image/bg4.jpg');">
+<section class="veg-area bg-img bg-overlay" style="background-image: url('../images/bg4.jpg');">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">

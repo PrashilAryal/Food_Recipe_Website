@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Chef;
 
 return new class extends Migration
 {
@@ -15,10 +16,14 @@ return new class extends Migration
     {
         Schema::create('chefs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('photo');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('chef_name');
+            $table->string('chef_profile_photo');
+            $table->string('chef_cover_photo');
+            $table->string('chef_email')->unique();
+            $table->string('chef_password');
+            $table->string('chef_phone_num');
+            $table->string('chef_address');
+            $table->string('chef_total_recipes');
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });

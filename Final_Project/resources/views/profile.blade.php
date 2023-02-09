@@ -3,9 +3,9 @@
 @section('content')
 <div class="cookProfile">
     <div class="profilePhotos">
-        <img id="coverPhoto" src="{{ asset('../image/bg2.jpg') }}" alt="">
+        <img id="coverPhoto" src="{{ asset('../images/bg2.jpg') }}" alt="">
         <div class="profile">
-            <img id="profilePhoto" src="{{ asset('../image/bg2.jpg') }}" alt="">
+            <img id="profilePhoto" src="{{ asset('../images/bg2.jpg') }}" alt="">
             <span>Name <br>
                 Address</span>
         </div>
@@ -28,18 +28,22 @@
             <div class="addRecipe">
                 <div class="addRecipeForm" id="addRecipeForm">
                     <h1>Add Recipe</h1>
-                    <form>
-                        <select name="category" class="select-field">
+                    <form action="{{route('save_recipe')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <select name="recipe_type" class="select-field">
                             <option value="" disabled selected>Choose dish type</option>
                             <option value="non_veg">Non-veg</option>
                             <option value="veg">Veg</option>
                         </select>
                         <label for="">Dish Photo</label>
-                        <input type="file" name="dish_photo" placeholder="Choose dish photo" />
-                        <input type="text" name="dish_name" placeholder="Dish Name" />
-                        <input type="text" name="cooking_time" placeholder="Time to cook" />
-                        <input type="text" name="ingredients" placeholder="ingredients" />
-                        <textarea name="description" placeholder="Way to cook"></textarea>
+                        <input type="file" name="recipe_photo" placeholder="Choose dish photo" />
+                        <input type="text" name="recipe_name" placeholder="Dish Name"
+                            class="@error ('recipe_type') is-invalid @enderror" />
+                        <span style="color:red;">@error ('recipe_name') {{$message}} @enderror</span>
+                        <input type="text" name="recipe_cooking_time" placeholder="Time to cook" />
+                        <input type="text" name="recipe_ingredients" placeholder="Ingredients required" />
+                        <textarea name="recipe_description" placeholder="About the dish"></textarea>
+                        <textarea name="recipe_steps" placeholder="Steps to cook the dish"></textarea>
                         <div>
                             <input type="submit" value="Add Recipe" class="chef-btn" />
                         </div>
@@ -47,15 +51,17 @@
                 </div>
                 <div class="editProfileForm" id="editProfileForm">
                     <h1>Edit Profile</h1>
-                    <form>
-                        <input type="text" name="name" placeholder="Your Name" />
+                    <form method="post" enctype="multipart/form-data">
+                        @csrf
+                        <input type="text" name="chef_name" placeholder="Your Name" />
                         <label for="">Profile Photo</label>
-                        <input type="file" name="profilePhoto" placeholder="Choose your profile photo" />
+                        <input type="file" name="chef_profile_photo" placeholder="Choose your profile photo" />
                         <label for="">Cover Photo</label>
-                        <input type="file" name="coverPhoto" placeholder="Choose your cover photo" />
-                        <input type="email" name="email" placeholder="Email" />
-                        <input type="text" name="phone_no" placeholder="Phone number" />
-                        <input type="text" name="address" placeholder="Your address" />
+                        <input type="file" name="chef_cover_photo" placeholder="Choose your cover photo" />
+                        <input type="email" name="chef_email" placeholder="Email" />
+                        <input type="text" name="chef_password" placeholder="Password" />
+                        <input type="text" name="chef_phone_no" placeholder="Phone number" />
+                        <input type="text" name="chef_address" placeholder="Your address" />
                         <div>
                             <input type="submit" value="Save" class="chef-btn" />
                         </div>
@@ -74,7 +80,7 @@
         <div class="post_container">
             <div class="post_box">
                 <div class="post_img">
-                    <img src="{{ asset('../image/r6.jpg') }}" alt="">
+                    <img src="{{ asset('../images/r6.jpg') }}" alt="">
                 </div>
                 <div class="post_text">
                     <span>18 July 2021 / Breakfast</span>

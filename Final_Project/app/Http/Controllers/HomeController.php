@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chef;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,7 +18,10 @@ class HomeController extends Controller
         return view('login');
     }
     public function profile(){
-        return view('profile');
+        // return view('profile');
+        $id = '4';
+        $data = Chef::find($id);
+        return view('profile', ['data'=>$data]);
     }
     public function about(){
         return view('about');

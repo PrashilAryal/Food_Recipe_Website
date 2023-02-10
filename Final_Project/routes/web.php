@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChefController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RecipeController;
@@ -22,3 +23,6 @@ Route::get('/profile',[HomeController::class, 'profile'])->name('profile');
 Route::get('/about',[HomeController::class, 'about'])->name('AboutPage');
 
 Route::post('/save-recipe', [RecipeController::class, 'save_recipe'])->name('save_recipe');
+
+Route::get('edit/{id}', [ChefController::class, 'edit']);
+Route::post('/update-chef', [ChefController::class, 'update_chef'])->name('update_chef');

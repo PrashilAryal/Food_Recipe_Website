@@ -43,8 +43,8 @@
     border-right: 3px solid #eef2e6;
     border-right: 3px solid green;
     padding: 10px;
-    flex: 20%;
-    max-width: 300px;
+    flex: 30%;
+    max-width: 350px;
 }
 
 /* Form Area */
@@ -55,7 +55,7 @@
 }
 .profileBody {
     padding: 10px;
-    flex: 50%;
+    flex: 40%;
 }
 .addRecipeForm {
     display: block;
@@ -66,8 +66,17 @@
 .otherDetails {
     border-left: 3px solid #eef2e6;
     padding: 10px;
-    flex: 20%;
+    flex: 30%;
     margin-top: 25px;
+    overflow: hidden;
+}
+.otherDetails ul {
+    margin-left: 0;
+}
+.otherDetails ul li {
+    font-size: 18px;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 /* Add Recipe Form */
@@ -75,6 +84,7 @@
     font: 95% Arial, Helvetica, sans-serif;
     margin: 10px auto;
     padding: 16px;
+    display: block;
 }
 .addRecipeForm div {
     text-align: center;
@@ -137,6 +147,7 @@
     font: 95% Arial, Helvetica, sans-serif;
     margin: 10px auto;
     padding: 16px;
+    display: none;
 }
 .editProfileForm div {
     text-align: center;

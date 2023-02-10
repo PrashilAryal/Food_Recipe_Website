@@ -17,8 +17,8 @@ return new class extends Migration
         Schema::create('chefs', function (Blueprint $table) {
             $table->id();
             $table->string('chef_name');
-            $table->string('chef_profile_photo');
-            $table->string('chef_cover_photo');
+            $table->string('chef_profile_photo')->nullable();
+            $table->string('chef_cover_photo')->nullable();
             $table->string('chef_email')->unique();
             $table->string('chef_password');
             $table->string('chef_phone_num');

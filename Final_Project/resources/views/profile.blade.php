@@ -6,21 +6,22 @@
         <img id="coverPhoto" src="{{ asset('../images/bg2.jpg') }}" alt="">
         <div class="profile">
             <img id="profilePhoto" src="{{ asset('../images/bg2.jpg') }}" alt="">
-            <span>Name <br>
-                Address</span>
+            <span>{{$data->chef_name}}<br>
+                {{$data->chef_address}}</span>
         </div>
     </div>
 
     <div class="profileContainer">
         <div class="profileSettings">
             <button id="settingBtn" class="setting-btn">Edit Profile</button>
+            <button id="addRecipeBtn" class="setting-btn">Add Recipe</button>
             <div class="otherDetails">
                 <h3>Personal Info.</h3>
                 <ul>
-                    <li>Name:</li>
-                    <li>Email:</li>
-                    <li>Address:</li>
-                    <li>Total recipes: </li>
+                    <li>{{$data->chef_name}}</li>
+                    <li>{{$data->chef_email}}</li>
+                    <li>{{$data->chef_address}}</li>
+                    <li>Total recipes: {{$data->chef_total_recipes}}</li>
                 </ul>
             </div>
         </div>
@@ -51,17 +52,17 @@
                 </div>
                 <div class="editProfileForm" id="editProfileForm">
                     <h1>Edit Profile</h1>
-                    <form method="post" enctype="multipart/form-data">
+                    <form action="{{route('update_chef')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <input type="text" name="chef_name" placeholder="Your Name" />
-                        <label for="">Profile Photo</label>
-                        <input type="file" name="chef_profile_photo" placeholder="Choose your profile photo" />
-                        <label for="">Cover Photo</label>
-                        <input type="file" name="chef_cover_photo" placeholder="Choose your cover photo" />
-                        <input type="email" name="chef_email" placeholder="Email" />
-                        <input type="text" name="chef_password" placeholder="Password" />
-                        <input type="text" name="chef_phone_no" placeholder="Phone number" />
-                        <input type="text" name="chef_address" placeholder="Your address" />
+                        <input type="hidden" name="id" value="{{$data->id}}" placeholder="ID">
+                        <input type="text" name="chef_name" value="{{$data->chef_name}}" placeholder="Your Name" />
+                        <input type="email" name="chef_email" value="{{$data->chef_email}}" placeholder="Email" />
+                        <input type="text" name="chef_password" value="{{$data->chef_password}}"
+                            placeholder="Password" />
+                        <input type="text" name="chef_phone_num" value="{{$data->chef_phone_num}}"
+                            placeholder="Phone number" />
+                        <input type="text" name="chef_address" value="{{$data->chef_address}}"
+                            placeholder="Your address" />
                         <div>
                             <input type="submit" value="Save" class="chef-btn" />
                         </div>
@@ -96,19 +97,40 @@
     </section>
     <script type="text/javascript">
     const settingBtn = document.getElementById('settingBtn');
+    const addRecipeBtn = document.getElementById('addRecipeBtn');
+
+    const edit = document.getElementById('editProfileForm');
+    const recipe = document.getElementById('addRecipeForm');
     settingBtn.addEventListener('click', () => {
-        const edit = document.getElementById('editProfileForm');
-        const recipe = document.getElementById('addRecipeForm');
 
         if (edit.style.display === 'none') {
             edit.style.display = 'block';
             recipe.style.display = 'none';
-            settingBtn.innerHTML = 'Add Recipe';
+            settingBtn.style.backgroundColor = 'green';
+            settingBtn.style.color = 'white';
+            addRecipeBtn.style.backgroundColor = '#eef2e6';
+            addRecipeBtn.style.color = 'green';
 
         } else {
             edit.style.display = 'none';
+            settingBtn.style.backgroundColor = '#eef2e6';
+            settingBtn.style.color = 'green';
+        }
+    });
+    addRecipeBtn.addEventListener('click', () => {
+
+        if (recipe.style.display === 'none') {
             recipe.style.display = 'block';
-            settingBtn.innerHTML = 'Edit Profile';
+            edit.style.display = 'none';
+            addRecipeBtn.style.backgroundColor = 'green';
+            addRecipeBtn.style.color = 'white';
+            settingBtn.style.backgroundColor = '#eef2e6';
+            settingBtn.style.color = 'green';
+
+        } else {
+            recipe.style.display = 'none';
+            addRecipeBtn.style.backgroundColor = '#eef2e6';
+            addRecipeBtn.style.color = 'green';
         }
     });
     </script>

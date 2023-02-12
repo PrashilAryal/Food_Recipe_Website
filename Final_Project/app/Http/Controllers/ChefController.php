@@ -25,4 +25,30 @@ class ChefController extends Controller
 
         return redirect()->route('profile');
     }
+
+     public function register_chef(Request $req){
+        // dd($req->all());
+        $req->validate([
+            'chef_name' => 'required',
+            'chef_email' => 'required',
+            'chef_password' => 'required',
+            'chef_address' => 'required',
+            'chef_phone_num' => 'required',
+            'chef_profile_photo' => 'required'
+        ]);
+        if($req->hasFile('chef_profile_photo'))
+        {
+            $photo = $req->file('chef_profile_photo');
+            $filePath = $photo->store('images', 'public');
+            Chef::Create([
+                'chef_name' => $req->chef_name,
+                'chef_email' => $req->chef_email,
+                'chef_password' => $req->chef_password,
+                'chef_address' => $req->chef_address,
+                'chef_phone_num' => $req->chef_phone_num,
+                'chef_profile_photo' => $filePath
+            ]);
+        }
+        return redirect()->route('login');
+     }
 }

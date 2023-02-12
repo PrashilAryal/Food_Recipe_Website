@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('chef_password');
             $table->string('chef_phone_num');
             $table->string('chef_address');
-            $table->string('chef_total_recipes');
+            $table->string('chef_total_recipes')->nullable();
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });

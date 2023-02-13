@@ -28,5 +28,5 @@ Route::get('edit/{id}', [ChefController::class, 'edit']);
 Route::post('/update-chef', [ChefController::class, 'update_chef'])->name('update_chef');
 
 Route::post('/register-chef', [ChefController::class, 'register_chef'])->name('register_chef');
-
+Route::get('/contact-us', [HomeController::class, 'contactPage'])->name('contactPage');
 Route::post('/login-chef', [ChefController::class,'login_chef'])->name('login_chef');

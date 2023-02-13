@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Chef;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
+
 
 class ChefController extends Controller
 {
@@ -40,10 +43,11 @@ class ChefController extends Controller
         {
             $photo = $req->file('chef_profile_photo');
             $filePath = $photo->store('images', 'public');
+            $hashpass = Hash::make($req->chef_password);
             Chef::Create([
                 'chef_name' => $req->chef_name,
                 'chef_email' => $req->chef_email,
-                'chef_password' => $req->chef_password,
+                'chef_password' => $hashpass,
                 'chef_address' => $req->chef_address,
                 'chef_phone_num' => $req->chef_phone_num,
                 'chef_profile_photo' => $filePath
@@ -51,4 +55,28 @@ class ChefController extends Controller
         }
         return redirect()->route('login');
      }
+      public function login_chef(Request $req)
+    {
+         $req->validate([
+            'chef_email' => 'required',
+            'chef_password' => 'required'
+        ]);
+
+        $chef = Chef::where('chef_email','=',$req->chef_email)->first();
+        
+
+        if($chef)
+        {
+            if(Hash::check($req->chef_password,$chef->chef_password))
+            {
+                return redirect('/');
+            }
+            else{
+                return back()->with('fail','Password not matched');
+            }
+        }
+        else{
+            return back()->with('fail','User Not Found');
+        }
+    }
 }

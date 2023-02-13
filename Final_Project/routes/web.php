@@ -29,3 +29,4 @@ Route::post('/update-chef', [ChefController::class, 'update_chef'])->name('updat
 
 Route::post('/register-chef', [ChefController::class, 'register_chef'])->name('register_chef');
 Route::get('/contact-us', [HomeController::class, 'contactPage'])->name('contactPage');
+Route::post('/login-chef', [ChefController::class,'login_chef'])->name('login_chef');

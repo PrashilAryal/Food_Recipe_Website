@@ -4,6 +4,7 @@
     align-items: center;
     min-height: 100vh;
     background: #095a55;
+    background-color: #305b37;
     box-sizing: border-box;
 }
 .contactSection::before {
@@ -14,6 +15,7 @@
     width: 50%;
     height: 100%;
     background: #fff38e;
+    background: #eef2e6;
 }
 .contactContainer {
     position: relative;
@@ -29,6 +31,7 @@
     width: 350px;
     height: calc(100% - 80px);
     background-color: #095a55;
+    background-color: #285430;
     z-index: 1;
     padding: 40px;
     display: flex;

@@ -97,50 +97,6 @@
     color: green;
     margin: -16px -16px 16px -16px;
 }
-.addRecipeForm input[type="text"],
-.addRecipeForm input[type="date"],
-.addRecipeForm input[type="datetime"],
-.addRecipeForm input[type="email"],
-.addRecipeForm input[type="number"],
-.addRecipeForm input[type="search"],
-.addRecipeForm input[type="time"],
-.addRecipeForm input[type="url"],
-.addRecipeForm input[type="file"],
-.addRecipeForm textarea,
-.addRecipeForm select {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4%;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 3%;
-    padding: 10px;
-    color: #555;
-    font: 95% Arial, Helvetica, sans-serif;
-}
-.addRecipeForm input[type="text"]:focus,
-.addRecipeForm input[type="date"]:focus,
-.addRecipeForm input[type="datetime"]:focus,
-.addRecipeForm input[type="email"]:focus,
-.addRecipeForm input[type="number"]:focus,
-.addRecipeForm input[type="search"]:focus,
-.addRecipeForm input[type="time"]:focus,
-.addRecipeForm input[type="url"]:focus,
-.addRecipeForm input[type="file"]:focus,
-.addRecipeForm textarea:focus,
-.addRecipeForm select:focus {
-    box-shadow: 0 0 5px green;
-    padding: 10px;
-    border: 1px solid #43d1af;
-}
 
 /* Edit Profile Form */
 .editProfileForm {
@@ -159,50 +115,6 @@
     text-align: center;
     color: green;
     margin: -16px -16px 16px -16px;
-}
-.editProfileForm input[type="text"],
-.editProfileForm input[type="date"],
-.editProfileForm input[type="datetime"],
-.editProfileForm input[type="email"],
-.editProfileForm input[type="number"],
-.editProfileForm input[type="search"],
-.editProfileForm input[type="time"],
-.editProfileForm input[type="url"],
-.editProfileForm input[type="file"],
-.editProfileForm textarea,
-.editProfileForm select {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4%;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 3%;
-    padding: 10px;
-    color: #555;
-    font: 95% Arial, Helvetica, sans-serif;
-}
-.editProfileForm input[type="text"]:focus,
-.editProfileForm input[type="date"]:focus,
-.editProfileForm input[type="datetime"]:focus,
-.editProfileForm input[type="email"]:focus,
-.editProfileForm input[type="number"]:focus,
-.editProfileForm input[type="search"]:focus,
-.editProfileForm input[type="time"]:focus,
-.editProfileForm input[type="url"]:focus,
-.editProfileForm input[type="file"]:focus,
-.editProfileForm textarea:focus,
-.editProfileForm select:focus {
-    box-shadow: 0 0 5px green;
-    padding: 10px;
-    border: 1px solid #43d1af;
 }
 
 .setting-btn {
@@ -322,4 +234,71 @@
     .oldRecord {
         padding: 20px;
     }
+}
+
+/* Profile form  */
+
+.editInputBox {
+    position: relative;
+    margin-bottom: 35px;
+}
+.editInputBox.w50 {
+    width: 100%;
+}
+.editInputBox.w100 {
+    width: 100%;
+}
+.editInputBox input,
+.addRecipeForm select,
+.editInputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+    background-color: #f3f4f2;
+}
+.editInputBox textarea {
+    height: 120px;
+}
+.editInputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.editInputBox input:focus ~ span,
+.editInputBox input:valid ~ span,
+.addRecipeForm select:focus ~ span,
+.addRecipeForm select:valid ~ span,
+.editInputBox textarea:focus ~ span,
+.editInputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+
+.editInputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.editInputBox input[type="submit"]:hover {
+    background: #0d948b;
 }

@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('content')
     
-<div class="bradcam_area  overlay" style="background-image: url('{{asset('img/recipe/recipe1.jpg')}}');">
+<div class="bradcam_area  overlay" style="background-image : url('{{asset('img/recipe/recipe1.jpg')}}');">
     <h3>RECIPE</h3>
 </div>
 
@@ -25,11 +25,11 @@
     
 
     
-    <div class="recepie_area plus_padding">
+    <div class="recipe_area plus_padding">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class ="Single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec3.jpg" alt="">
                         </div>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_recepie text-center">
+                    <div class="single_recipe text-center">
                         <div class="recipe_thumb">
                             <img src="img/recipe/rec1.jpg" alt="">
                         </div>

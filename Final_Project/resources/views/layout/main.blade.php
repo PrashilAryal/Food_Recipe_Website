@@ -49,7 +49,7 @@
                             <a class="nav-link active" aria-current="page" href="{{route('contactPage')}}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Recipe</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('recipePage')}}">Recipe</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

@@ -29,4 +29,7 @@ class HomeController extends Controller
     public function contactPage(){
         return view('contact');
     }
+    public function recipe(){
+        return view('Recipe');
+    }
 }

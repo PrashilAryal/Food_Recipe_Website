@@ -12,6 +12,7 @@
     <link rel="icon" href="{{ asset('../images/icon.png')}}" type="image/png">
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/recipe.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">

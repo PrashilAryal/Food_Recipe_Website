@@ -21,7 +21,7 @@ class AdminController extends Controller
         {
             if($req->admin_password==$admin->admin_password)
             {
-                return redirect('/');
+                return redirect()->route('adminpanel');
             }
             else{
                 return back()->with('fail','Password not matched');

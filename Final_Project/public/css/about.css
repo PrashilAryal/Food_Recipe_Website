@@ -13,13 +13,7 @@
   justify-content: start;
 }
 
-/* Normal desktop :1200px. */
-/* Normal desktop :992px. */
-/* Tablet desktop :768px. */
-/* small mobile :320px. */
-/* Large Mobile :480px. */
-/* 1. Theme default css */
-/* line 4, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/theme-default.scss */
+
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
@@ -473,7 +467,7 @@ h3 {
   padding-bottom: 2px;
 }
 
-/* line 122, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_btn.scss */
+
 .line-button::before {
   position: absolute;
   content: "";
@@ -484,7 +478,7 @@ h3 {
   left: 0;
 }
 
-/* line 131, ../../Arafath/CL/December/229. Restaurant (Burger)/HTML/scss/_btn.scss */
+
 .line-button:hover {
   color: #F0542C;
 }
@@ -2682,6 +2676,8 @@ h3 {
   background-size: cover;
   background-position: center center;
   text-align: center;
+  height: 500px;
+  margin: 30px 0;
   padding: 215px 0 100px 0;
 }
 

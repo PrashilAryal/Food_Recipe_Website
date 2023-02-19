@@ -17,6 +17,12 @@ class HomeController extends Controller
     public function login(){
         return view('login');
     }
+      public function adminlogin(){
+        return view('adminlogin');
+    }
+     public function mainlogin(){
+        return view('mainlogin');
+    }
     public function profile(){
         // return view('profile');
         $id = '4';

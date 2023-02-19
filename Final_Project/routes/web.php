@@ -26,6 +26,7 @@ Route::get('/about',[HomeController::class, 'about'])->name('AboutPage');
 Route::get('/recipe',[HomeController::class, 'recipe'])->name('recipePage');
 Route::get('/mainlogin',[HomeController::class, 'mainlogin'])->name('mainlogin');
 Route::get('/adminlogin', [HomeController::class, 'adminlogin'])->name('adminlogin');
+Route::get('/adminpanel', [HomeController::class, 'adminpanel'])->name('adminpanel');
 
 
 

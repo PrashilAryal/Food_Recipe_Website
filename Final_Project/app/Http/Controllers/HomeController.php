@@ -14,6 +14,9 @@ class HomeController extends Controller
     public function register(){
         return view('register');
     }
+    public function adminpanel(){
+        return view('adminpanel');
+    }
     public function login(){
         return view('login');
     }

@@ -51,6 +51,12 @@
 		  "></div>
 </section>
 
+
+
+
+
+
+
 <!-- ##### Top Catagory Area Start ##### -->
 <section class="top-catagory-area section-padding-80-0">
     <div class="container">
@@ -95,92 +101,30 @@
             </div>
         </div>
 
+
         <div class="row">
-            <!-- Single Best Receipe Area -->
+            <!-- <div class="containerCheck"> -->
+            @foreach($recipesAll as $value)
+            <!-- <div class="itemCheck"> -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../images/r1.jpg') }}" alt="">
+                    <img src="{{asset('storage/'.$value->recipe_photo)}}" alt="">
                     <div class="receipe-content">
                         <a href="receipe-post.html">
-                            <h5>Sushi Easy Receipy</h5>
+                            <h5>{{$value->recipe_name}}</h5>
                             <button class="chef-btn">View Recipe</button>
                         </a>
-
                     </div>
                 </div>
             </div>
-
-            <!-- Single Best Receipe Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../images/r2.jpg') }}" alt="">
-                    <div class="receipe-content">
-                        <a href="receipe-post.html">
-                            <h5>Homemade Burger</h5>
-                            <button class="chef-btn">View Recipe</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Best Receipe Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../images/r3.jpg') }}" alt="">
-                    <div class="receipe-content">
-                        <a href="receipe-post.html">
-                            <h5>Vegan Smoothie</h5>
-                            <button class="chef-btn">View Recipe</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Best Receipe Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../images/r4.jpg') }}" alt="">
-                    <div class="receipe-content">
-                        <a href="receipe-post.html">
-                            <h5>Calabasa soup</h5>
-                            <button class="chef-btn">View Recipe</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Best Receipe Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../images/r5.jpg') }}" alt="">
-                    <div class="receipe-content">
-                        <a href="receipe-post.html">
-                            <h5>Homemade Breakfast</h5>
-                            <button class="chef-btn">View Recipe</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Best Receipe Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-best-receipe-area mb-30">
-                    <img src="{{ asset('../images/r6.jpg') }}" alt="">
-                    <div class="receipe-content">
-                        <a href="receipe-post.html">
-                            <h5>Healthy Fruit Desert</h5>
-                            <button class="chef-btn">View Recipe</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+            <!-- </div> -->
+            @endforeach
+            <!-- </div> -->
         </div>
+
+
     </div>
+
 </section>
 <!-- ##### Best Receipe Area End ##### -->
 

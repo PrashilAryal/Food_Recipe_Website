@@ -147,6 +147,58 @@
 </section>
 <!-- ##### VEG Area End ##### -->
 
+<!-- ##### Veg Receipe Area Start ##### -->
+<section class="best-receipe-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h3>Veg Recipes</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "chefs_kitchen";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                if ($conn->connect_error){
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT id, recipe_name,recipe_photo, recipe_ingredients FROM recipes WHERE recipe_type = 'veg' ";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                // output data of each row
+                    while($row = $result->fetch_assoc()) {
+            ?>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-best-receipe-area mb-30">
+                    <img src="{{asset('storage/'.$row["recipe_photo"])}}" alt="">
+                    <div class="receipe-content">
+                        <a href="receipe-post.html">
+                            <h5>{{$row["recipe_name"]}}</h5>
+                            <button class="chef-btn">View Recipe</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+                    }
+                }
+                $conn->close();
+            ?>
+        </div>
+    </div>
+</section>
+<!-- ##### Veg Receipe Area End ##### -->
+
 <!-- ##### Quotes Area Start ##### -->
 <section class="quoteArea">
     <div class="quote-item">

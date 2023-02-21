@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Chef::factory()->times(10)->create();
-        Recipe::factory()->times(10)->create();
+        // Recipe::factory()->times(10)->create();
     }
 }

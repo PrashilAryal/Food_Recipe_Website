@@ -15,6 +15,11 @@ class ChefController extends Controller
         $data = Chef::find($id);
         return view('profile', ['data'=>$data]);
     }
+    //  public function getchef()
+    // {
+    //     $item = Chef::all();
+    //     return view('adminpanel', ['chefs'=>$item]);
+    // }
      
     public function update_chef(Request $req){
         $chefObj = Chef::find($req->id);
@@ -79,4 +84,19 @@ class ChefController extends Controller
             return back()->with('fail','User Not Found');
         }
     }
+     public function deldata($id)
+    { 
+        $delobj = Chef::find($id);
+        $delobj ->delete();
+        return redirect("adminpanel");
+
+    }
+    public function search(Request $req)
+    {
+        $search_text = $req->input('srch_chef');
+        $srchdata = Chef::where('chef_name','LIKE','%'.$search_text.'%')->get();
+        return view('adminpanel',['chefs'=>$srchdata]);
+    }
+    
+    
 }

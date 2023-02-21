@@ -16,7 +16,8 @@ class HomeController extends Controller
         return view('register');
     }
     public function adminpanel(){
-        return view('adminpanel');
+        $item = Chef::all();
+        return view('adminpanel', ['chefs'=>$item]);;
     }
     public function login(){
         return view('login');

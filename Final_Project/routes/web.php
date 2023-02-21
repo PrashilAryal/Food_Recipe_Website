@@ -4,6 +4,8 @@ use App\Http\Controllers\ChefController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,10 @@ Route::get('/profile',[HomeController::class, 'profile'])->name('profile');
 Route::get('/about',[HomeController::class, 'about'])->name('AboutPage');
 Route::get('/recipe',[HomeController::class, 'recipe'])->name('recipePage');
 Route::get('/ViewRecipe',[HomeController::class, 'ViewRecipe'])->name('ViewRecipe');
+Route::get('/mainlogin',[HomeController::class, 'mainlogin'])->name('mainlogin');
+Route::get('/adminlogin', [HomeController::class, 'adminlogin'])->name('adminlogin');
+Route::get('/adminpanel', [HomeController::class, 'adminpanel'])->name('adminpanel');
+
 
 
 Route::post('/save-recipe', [RecipeController::class, 'save_recipe'])->name('save_recipe');
@@ -33,3 +39,4 @@ Route::post('/update-chef', [ChefController::class, 'update_chef'])->name('updat
 Route::post('/register-chef', [ChefController::class, 'register_chef'])->name('register_chef');
 Route::get('/contact-us', [HomeController::class, 'contactPage'])->name('contactPage');
 Route::post('/login-chef', [ChefController::class,'login_chef'])->name('login_chef');
+Route::post('/login-admin', [AdminController::class,'login_admin'])->name('login_admin');

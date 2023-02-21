@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chef;
+use App\Models\Recipe;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     //
     public function welcome(){
-        return view('welcome');
+        return view('welcome', ['recipesAll'=>Recipe::all()]);
     }
     public function register(){
         return view('register');
     }
+    public function adminpanel(){
+        return view('adminpanel');
+    }
     public function login(){
         return view('login');
+    }
+      public function adminlogin(){
+        return view('adminlogin');
+    }
+     public function mainlogin(){
+        return view('mainlogin');
     }
     public function profile(){
         // return view('profile');

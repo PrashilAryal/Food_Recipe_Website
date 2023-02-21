@@ -18,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/about.css')}}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -58,7 +58,7 @@
                                 Are you a chef?
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                                <li><a class="dropdown-item" href="{{route('mainlogin')}}">Login</a></li>
                                 <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -93,7 +93,7 @@
 
 
 
-                {{-- <div>
+                <div>
         <a href="" class="text-white me-4">
           <i class="fab fa-facebook-f"></i>
         </a>
@@ -112,7 +112,7 @@
         <a href="" class="text-white me-4">
           <i class="fab fa-github"></i>
         </a>
-      </div> --}}
+      </div>
 
             </section>
 
@@ -159,10 +159,10 @@
                                 <a href="{{route('AboutPage')}}" class="text-white">About Us</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">Act1</a>
+                                <a href="{{route('contactPage')}}" class="text-white">Contact</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">Act1</a>
+                                <a href="{{route('recipePage')}}" class="text-white">Recipe</a>
                             </p>
                         </div>
 

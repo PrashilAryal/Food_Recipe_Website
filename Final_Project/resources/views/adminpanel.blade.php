@@ -60,12 +60,15 @@
             <ion-icon name="menu-outline"></ion-icon>
           </div>
           <!-- search -->
-          {{-- <div class="search">
-            <label for="">
-              <input type="text" placeholder="Search Here" />
-              <ion-icon name="search-outline"></ion-icon>
-            </label>
-          </div> --}}
+          <form action="{{url('/search')}}" method="get">
+
+            <div class="search">
+              <label for="">
+                <input type="text" placeholder="Search Here" name="srch_chef"/>
+                <ion-icon name="search-outline"></ion-icon>
+              </label>
+            </div>
+          </form>
           <!-- userImg -->
           <div class="user">
            <span>
@@ -119,7 +122,7 @@
           <div class="recentorders">
             <div class="cardHeader">
               <h2>Chefs List</h2>
-              <a href="" class="btn">View All</a>
+              {{-- <a href="" class="btn">View All</a> --}}
             </div>
             <table>
               <thead>
@@ -131,60 +134,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status delivered">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status pending">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status delivered">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status inprogress">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status return">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status delivered">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status delivered">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status delivered">UJwal</span></td>
-                </tr>
-                <tr>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td>UJwal</td>
-                  <td><span class="status delivered">UJwal</span></td>
-                </tr>
+                @foreach ($chefs as $value)
+                  <tr>
+                      <td>{{ $value['chef_name']}}</td>
+                      <td>{{ $value['chef_email'] }}</td>
+                      <td>{{ $value['chef_total_recipes']}}</td>
+                      <td><a class="btn btn-danger" href="/delete/{{$value->id}}"> Delete</a></td>
+                  </tr>
+               @endforeach
               </tbody>
             </table>
           </div>

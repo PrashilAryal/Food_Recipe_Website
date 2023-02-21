@@ -10,6 +10,7 @@
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
+    --red: #b53000;
 }
 body {
     min-height: 100vh;
@@ -257,7 +258,7 @@ body {
 .btn {
     position: relative;
     padding: 5px 10px;
-    background: var(--blue);
+    background: var(--red);
     color: var(--white);
     border-radius: 6px;
     text-decoration: none;

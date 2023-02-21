@@ -32,4 +32,7 @@ class HomeController extends Controller
     public function recipe(){
         return view('Recipe');
     }
+    public function ViewRecipe(){
+        return view('ViewRecipe');
+    }
 }

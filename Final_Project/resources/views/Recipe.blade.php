@@ -22,12 +22,12 @@
             <div class="col-xl-4 col-lg-4 col-md-6">
             <div class="single_recipe text-center mb-20">
                         <div class="recipe_thumb">
-                            <img src="img/recipe/sand.jpg" alt="">
+                            <img src="img/recipe/sandn.jpg" alt="">
                         </div>
                         <h3>sandwich</h3>
                         
-                        <p>Time Needs: 30 Mins</p>
-                        <button type="button" class="btn btn-outline-secondary">View Full Recipe</button>
+                        <p>Time Needs: 15min Mins</p>
+                        <a href="{{route('ViewRecipe')}}" class="btn btn-outline-secondary"> View Full Recipe</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">

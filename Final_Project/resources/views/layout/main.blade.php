@@ -67,8 +67,8 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search recipe..."
+                    <form class="d-flex" method="GET" action="{{route('recipesearch')}}">
+                        <input class="form-control me-2" type="search" name="recipesearch" placeholder="Search recipe..."
                             aria-label="Search">
                         <button class="btn-search" type="submit">Search</button>
                     </form>

@@ -45,3 +45,5 @@ Route::post('/login-admin', [AdminController::class,'login_admin'])->name('login
 // Route::get('/getchef', [ChefController::class, 'getchef']);
 
 Route::get('/search', [ChefController::class,'search']);
+Route::get('/recipesearch', [RecipeController::class,'recipesearch'])->name('recipesearch');
+

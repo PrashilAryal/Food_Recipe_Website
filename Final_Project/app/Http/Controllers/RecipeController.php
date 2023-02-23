@@ -35,4 +35,14 @@ class RecipeController extends Controller
         }
         return redirect()->route('profile');
     }
+    public function recipesearch(Request $request)
+  {
+    $query = $request->input('recipesearch');
+
+    $posts = Recipe::where('recipe_name', 'like', '%'.$query.'%')
+                 ->orWhere('recipe_description', 'like', '%'.$query.'%')
+                 ->get();
+
+    return view('searchpage', compact('posts', 'query'));
+  }
 }

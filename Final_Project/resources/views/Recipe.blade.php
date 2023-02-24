@@ -13,7 +13,8 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single_recipe text-center mb-20">
                             <div class="recipe_thumb">
-                                <img src="img/recipe/sandn.jpg" alt="">
+                                <img style="object-fit:cover" src="{{asset('storage/' . $recipe->recipe_photo)}}" alt="">
+                                <!-- <img src="img/recipe/sandn.jpg" alt=""> -->
                             </div>
                             <h3>{{$recipe->recipe_name}}</h3>
                             <p>{{$recipe->recipe_cooking_time}}</p>

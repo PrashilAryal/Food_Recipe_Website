@@ -24,7 +24,7 @@ Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/profile',[HomeController::class, 'profile'])->name('profile');
 Route::get('/about',[HomeController::class, 'about'])->name('AboutPage');
 Route::get('/recipe',[HomeController::class, 'recipe'])->name('recipePage');
-Route::get('/ViewRecipe',[HomeController::class, 'ViewRecipe'])->name('ViewRecipe');
+Route::get('/ViewRecipe/{recipeid}',[HomeController::class, 'ViewRecipe'])->name('ViewRecipe');
 Route::get('/mainlogin',[HomeController::class, 'mainlogin'])->name('mainlogin');
 Route::get('/adminlogin', [HomeController::class, 'adminlogin'])->name('adminlogin');
 Route::get('/adminpanel', [HomeController::class, 'adminpanel'])->name('adminpanel');

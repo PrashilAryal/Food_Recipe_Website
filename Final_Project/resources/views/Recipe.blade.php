@@ -3,7 +3,7 @@
     
 
 
-<div class="bradcam_area  overlay" style="background-image : url('{{asset('img/recipe/img1.jpg')}}');">
+<div class="bradcam_area  overlay" style="background-image : url('{{asset('img/recipe/cookme.jpg')}}');">
     
 </div>
     <div class="recipe_area plus_padding mt-5">
@@ -17,7 +17,7 @@
                                 <!-- <img src="img/recipe/sandn.jpg" alt=""> -->
                             </div>
                             <h3>{{$recipe->recipe_name}}</h3>
-                            <p>{{$recipe->recipe_cooking_time}}</p>
+                            <p>{{$recipe->recipe_type}}</p> 
                             <a href="{{url('ViewRecipe/' . $recipe->id)}}" class="btn btn-outline-secondary"> View Full Recipe</a>
                         </div>
                     </div>

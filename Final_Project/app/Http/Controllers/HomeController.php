@@ -30,7 +30,7 @@ class HomeController extends Controller
     }
     public function profile(){
         // return view('profile');
-        $id = '4';
+        $id = '1';
         $data = Chef::find($id);
         return view('profile', ['data'=>$data]);
     }
@@ -41,9 +41,11 @@ class HomeController extends Controller
         return view('contact');
     }
     public function recipe(){
-        return view('Recipe');
+        $Recipes= Recipe::all();
+        return view('Recipe',compact('Recipes'));
     }
-    public function ViewRecipe(){
-        return view('ViewRecipe');
+    public function ViewRecipe($recipeid){
+        $RecipesDetails = Recipe::find($recipeid);
+        return view('ViewRecipe',compact('RecipesDetails'));
     }
 }

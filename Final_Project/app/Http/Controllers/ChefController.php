@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Chef;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session as Session;
 
 class ChefController extends Controller
 {
@@ -48,6 +48,7 @@ class ChefController extends Controller
         {
             $photo = $req->file('chef_profile_photo');
             $filePath = $photo->store('images', 'public');
+            $chefRole = "chef";
             $hashpass = Hash::make($req->chef_password);
             Chef::Create([
                 'chef_name' => $req->chef_name,
@@ -55,7 +56,8 @@ class ChefController extends Controller
                 'chef_password' => $hashpass,
                 'chef_address' => $req->chef_address,
                 'chef_phone_num' => $req->chef_phone_num,
-                'chef_profile_photo' => $filePath
+                'chef_profile_photo' => $filePath,
+                'chef_role' => $chefRole
             ]);
         }
         return redirect()->route('login');
@@ -68,12 +70,12 @@ class ChefController extends Controller
         ]);
 
         $chef = Chef::where('chef_email','=',$req->chef_email)->first();
-        
 
         if($chef)
         {
             if(Hash::check($req->chef_password,$chef->chef_password))
             {
+                session()->put('userid',$chef->id);
                 return redirect('/');
             }
             else{
@@ -96,6 +98,14 @@ class ChefController extends Controller
         $search_text = $req->input('srch_chef');
         $srchdata = Chef::where('chef_name','LIKE','%'.$search_text.'%')->get();
         return view('adminpanel',['chefs'=>$srchdata]);
+    }
+
+    public function logout(){
+        if(Session::has('userid')){
+            Session::pull('userid');
+            return redirect('/');
+            
+        }
     }
     
     

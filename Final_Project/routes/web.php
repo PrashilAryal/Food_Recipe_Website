@@ -46,4 +46,4 @@ Route::post('/login-admin', [AdminController::class,'login_admin'])->name('login
 
 Route::get('/search', [ChefController::class,'search']);
 Route::get('/recipesearch', [RecipeController::class,'recipesearch'])->name('recipesearch');
-
+Route::get('/logout', [ChefController::class,'logout'])->name('logout');

@@ -3,11 +3,17 @@
 @section('content')
 <div class="cookProfile">
     <div class="profilePhotos">
-        <img id="coverPhoto" src="{{ asset('../images/bg2.jpg') }}" alt="">
+        <!-- <img id="coverPhoto" src="{{ asset('../images/bg2.jpg') }}" alt=""> -->
+        <img id="coverPhoto" src="{{asset('storage/'.$data->chef_cover_photo)}}" alt="">
+
+
+
+
         <div class="profile">
-            <img id="profilePhoto" src="{{ asset('../images/bg2.jpg') }}" alt="">
+            <img id="profilePhoto" src="{{asset('storage/'.$data->chef_profile_photo)}}" alt="">
             <span>{{$data->chef_name}}<br>
                 {{$data->chef_address}}</span>
+
         </div>
     </div>
 
@@ -67,6 +73,11 @@
                             <textarea name="recipe_steps" id="recipe_steps" autocomplete="off" required></textarea>
                             <span>Steps to cook the dish...</span>
                         </div>
+                        <div class="editInputBox w50">
+                            <input type="hidden" name="chef_id" id="chef_id" value="{{$data->id}}" autocomplete="off"
+                                required>
+                            <!-- <span>Chef ID</span> -->
+                        </div>
                         <div>
                             <input type="submit" value="Add Recipe" class="chef-btn" />
                         </div>
@@ -92,7 +103,7 @@
                             <span>Email</span>
                         </div>
                         <div class="editInputBox w50">
-                            <input type="text" name="chef_password" id="chef_password" value="{{$data->chef_password}}"
+                            <input type="text" name="chef_password" id="chef_password" value="{{$password}}"
                                 autocomplete="off" required>
                             <span>Password</span>
                         </div>
@@ -121,19 +132,43 @@
             <h3>My Recipes</h3>
         </div>
         <div class="post_container">
-            <div class="post_box">
-                <div class="post_img">
-                    <img src="{{ asset('../images/r6.jpg') }}" alt="">
+            <?php
+                $servername = "localhost:3306";
+                $username = "root";
+                $password = "";
+                $dbname = "chefs_kitchen";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                if ($conn->connect_error){
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT id, recipe_name,recipe_photo, recipe_ingredients, recipe_description FROM recipes WHERE chef_id = $data->id";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                // output data of each row
+                    while($row = $result->fetch_assoc()) {
+            ?>
+            <div class="post_box" style="border:1px solid green;">
+                <div class="post_img" style="height: 500px; width:100%;">
+                    <!-- <img src="{{ asset('../images/r6.jpg') }}" alt=""> -->
+                    <img src="{{asset('storage/'.$row["recipe_photo"])}}" alt="">
                 </div>
                 <div class="post_text">
-                    <span>18 July 2021 / Breakfast</span>
-                    <a href="#" class="post_title">Click here to view full recipe</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio suscipit voluptas
-                        quisquam deleniti ducimus placeat reiciendis doloribus a alias impedit facilis porro
-                        nemo tempore quam, accusamus odio vitae? Officia, voluptatum.</p>
-                    <a href="#">Read More</a>
+                    <!-- <span>18 July 2021 / Breakfast</span> -->
+                    <span>{{$row["recipe_name"]}}</span>
+                    <!-- <a href="#" class="post_title">Click here to view full recipe</a> -->
+                    <p>Ingredients: {{$row["recipe_ingredients"]}}</p>
+                    <p>Description: {{$row["recipe_description"]}}</p>
+                    <a href="{{url('ViewRecipe/' . $row["id"])}}">Read More</a>
                 </div>
             </div>
+            <?php
+                    }
+                }
+                $conn->close();
+            ?>
         </div>
 
     </section>

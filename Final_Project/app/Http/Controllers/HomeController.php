@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Chef;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session as Session;
 
 class HomeController extends Controller
 {
@@ -30,9 +32,13 @@ class HomeController extends Controller
     }
     public function profile(){
         // return view('profile');
-        $id = '1';
-        $data = Chef::find($id);
-        return view('profile', ['data'=>$data]);
+        // $id = "11";
+        $user = Session::get('userid');
+        // $id = Auth::chef()->id;
+        $data = Chef::find($user);
+        $password = bcrypt($data->chef_password);
+        $myRecipes = Recipe::all();
+        return view('profile', compact('data','password', 'myRecipes'));
     }
     public function about(){
         return view('about');

@@ -65,10 +65,11 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'chefs' => [
+            'driver' => 'database',
+            'table' => 'chefs',
+            'model' => App\Models\Chef::class,
+        ],
     ],
 
     /*

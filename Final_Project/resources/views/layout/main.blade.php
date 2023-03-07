@@ -1,3 +1,5 @@
+<?php use Illuminate\Support\Facades\Auth; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,6 +41,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    @if(empty(Session::get('userid')))
+
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
@@ -57,19 +61,66 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Are you a chef?
                             </a>
+
+
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{route('mainlogin')}}">Login</a></li>
                                 <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="{{route('profile')}}">Your Profile</a></li>
+
+
+
                             </ul>
+
+
                         </li>
                     </ul>
+
+
+                    @else
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('AboutPage')}}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('contactPage')}}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('recipePage')}}">Recipe</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Are you a chef?
+                            </a>
+
+
+                            <ul class="dropdown-menu" style="z-index:9999 !important" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
+                                <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" href="{{route('profile')}}">Your Profile</a></li>
+
+
+                            </ul>
+
+
+                        </li>
+                    </ul>
+
+
+                    @endif
                     <form class="d-flex" method="GET" action="{{route('recipesearch')}}">
-                        <input class="form-control me-2" type="search" name="recipesearch" placeholder="Search recipe..."
-                            aria-label="Search">
+                        <input class="form-control me-2" type="search" name="recipesearch"
+                            placeholder="Search recipe..." aria-label="Search">
                         <button class="btn-search" type="submit">Search</button>
                     </form>
                 </div>
@@ -94,25 +145,25 @@
 
 
                 <div>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
 
             </section>
 

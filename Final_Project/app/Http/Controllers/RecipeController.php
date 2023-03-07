@@ -17,7 +17,8 @@ class RecipeController extends Controller
             'recipe_ingredients' => 'required',
             'recipe_description' => 'required',
             'recipe_steps' => 'required',
-            'recipe_cooking_time' => 'required'
+            'recipe_cooking_time' => 'required',
+            'chef_id' => 'required'
         ]);
         if($req->hasFile('recipe_photo'))
         {
@@ -30,7 +31,8 @@ class RecipeController extends Controller
                 'recipe_description' => $req->recipe_description,
                 'recipe_steps' => $req->recipe_steps,
                 'recipe_ingredients' => $req->recipe_ingredients,
-                'recipe_cooking_time' => $req->recipe_cooking_time
+                'recipe_cooking_time' => $req->recipe_cooking_time,
+                'chef_id' => $req->chef_id
             ]);
         }
         return redirect()->route('profile');

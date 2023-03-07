@@ -26,6 +26,7 @@ class ChefFactory extends Factory
             'chef_total_recipes' => $this->faker->numberBetween(1,10),
             'chef_profile_photo' => $this->faker->text(30),
             'chef_cover_photo' => $this->faker->text(30),
+            'chef_role' => 'chef',
         ];
     }
 }

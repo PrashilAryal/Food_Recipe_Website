@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('chef_phone_num');
             $table->string('chef_address');
             $table->string('chef_total_recipes')->nullable();
+            $table->string('chef_role')->default('chef');
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });

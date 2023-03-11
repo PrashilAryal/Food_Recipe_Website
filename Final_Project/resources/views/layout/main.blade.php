@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/recipe.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/recipe.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/about.css')}}">

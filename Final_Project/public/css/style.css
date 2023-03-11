@@ -415,9 +415,20 @@ body {
 .single-best-receipe-area {
     position: relative;
     z-index: 1;
+    padding: 40px;
+}
+.single-best-receipe-area .homeImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
 }
 .single-best-receipe-area img {
     border-bottom: 3px solid #40ba37;
+    /* float: left; */
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 .single-best-receipe-area .receipe-content {
     padding-top: 30px;

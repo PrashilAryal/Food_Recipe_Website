@@ -108,9 +108,11 @@
             <!-- <div class="itemCheck"> -->
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{asset('storage/'.$value->recipe_photo)}}" alt="">
+                    <div class="homeImage">
+                        <img src="{{asset('storage/'.$value->recipe_photo)}}" alt="">
+                    </div>
                     <div class="receipe-content">
-                        <a href="receipe-post.html">
+                        <a href="{{url('ViewRecipe/' . $value->id)}}">
                             <h5>{{$value->recipe_name}}</h5>
                             <button class="chef-btn">View Recipe</button>
                         </a>
@@ -180,9 +182,11 @@
             ?>
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-best-receipe-area mb-30">
-                    <img src="{{asset('storage/'.$row["recipe_photo"])}}" alt="">
+                    <div class="homeImage">
+                        <img src="{{asset('storage/'.$row["recipe_photo"])}}" alt="">
+                    </div>
                     <div class="receipe-content">
-                        <a href="receipe-post.html">
+                        <a href="{{url('ViewRecipe/' . $row["id"])}}">
                             <h5>{{$row["recipe_name"]}}</h5>
                             <button class="chef-btn">View Recipe</button>
                         </a>

@@ -539,3 +539,164 @@ body {
 .containerCheck .itemCheck {
     padding: 10px;
 }
+
+/* login page */
+.loginSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #095a55;
+    background-color: #305b37;
+    box-sizing: border-box;
+}
+.loginSection::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: #fff38e;
+    background: #eef2e6;
+}
+.loginContainer {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    z-index: 1000;
+}
+
+.loginContainer .loginForm {
+    position: absolute;
+    padding: 70px 50px;
+    margin-left: 150px;
+    width: calc(100% - 300px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.loginContainer .loginForm h2 {
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+.loginContainer .loginForm .loginFormBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.loginContainer .loginForm .loginFormBox .loginInputBox {
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loginContainer .loginForm .loginFormBox .loginInputBox.w50 {
+    width: 51%;
+}
+.loginContainer .loginForm .loginFormBox .loginInputBox input,
+.loginContainer .loginForm .loginFormBox .loginInputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.loginContainer .loginForm .loginFormBox .loginInputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.loginContainer .loginForm .loginFormBox .loginInputBox input:focus ~ span,
+.loginContainer .loginForm .loginFormBox .loginInputBox input:valid ~ span,
+.loginContainer .loginForm .loginFormBox .loginInputBox textarea:focus ~ span,
+.loginContainer .loginForm .loginFormBox .loginInputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+.loginContainer .loginForm .loginFormBox .loginInputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+.loginContainer
+    .loginForm
+    .loginFormBox
+    .loginInputBox
+    input[type="submit"]:hover {
+    background: #0d948b;
+}
+.loginButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+@media (max-width: 1200px) {
+    .loginContainer {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+    .loginContainer .loginForm {
+        position: relative;
+        width: calc(100% - 50px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+    }
+}
+@media (max-width: 991px) {
+    .loginSection::before {
+        display: none;
+    }
+    .loginContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .loginContainer .loginForm {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    .loginContainer .loginForm {
+        padding: 25px;
+    }
+    .loginContainer .loginForm .loginFormBox .loginInputBox.w50 {
+        width: 100%;
+    }
+}
+.loginError {
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

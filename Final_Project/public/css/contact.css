@@ -258,3 +258,14 @@
         width: 100%;
     }
 }
+
+.messageSentSuccess {
+    background-color: #285430;
+    color: white;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

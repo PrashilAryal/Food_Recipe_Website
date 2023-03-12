@@ -33,30 +33,37 @@
                 <li><a href="#"><img src="{{ asset('../images/location.png') }}" alt=""></a></li>
             </ul>
         </div>
-        <form action="" method="">
+        <form action="{{route('send_message')}}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="contactForm">
                 <h2>Send a message</h2>
+                @if(Session::has('success'))
+                <div class="messageSentSuccess">
+                    <span class="">{{Session::get('success')}}</span><br>
+                </div>
+                @endif
+                {{-- @if($errors->any())
+                        <span>{{$error}}</span>
+                @endif --}}
                 <div class="contactFormBox">
                     <div class="contactInputBox w50">
-                        <input type="text" name="customer_first_name" id="customer_first_name" autocomplete="off"
-                            required>
+                        <input type="text" name="user_firstname" id="user_firstname" autocomplete="off" required>
                         <span>First Name</span>
                     </div>
                     <div class="contactInputBox w50">
-                        <input type="text" name="customer_last_name" id="customer_last_name" autocomplete="off"
-                            required>
+                        <input type="text" name="user_lastname" id="user_lastname" autocomplete="off" required>
                         <span>Last Name</span>
                     </div>
                     <div class="contactInputBox w50">
-                        <input type="email" name="customer_email" id="customer_email" autocomplete="off" required>
+                        <input type="email" name="user_email" id="user_email" autocomplete="off" required>
                         <span>Email Address</span>
                     </div>
                     <div class="contactInputBox w50">
-                        <input type="text" name="customer_subject" id="customer_subject" autocomplete="off" required>
+                        <input type="text" name="user_subject" id="user_subject" autocomplete="off" required>
                         <span>Subject</span>
                     </div>
                     <div class="contactInputBox w100">
-                        <textarea name="customer_message" id="customer_message" autocomplete="off" required></textarea>
+                        <textarea name="user_message" id="user_message" autocomplete="off" required></textarea>
                         <span>Write your message here...</span>
                     </div>
                     <div class="contactInputBox w50">
@@ -67,6 +74,5 @@
         </form>
     </div>
 </section>
-
 
 @endsection

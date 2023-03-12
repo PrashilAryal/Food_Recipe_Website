@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MessageController;
 
 
 /*
@@ -47,3 +48,5 @@ Route::post('/login-admin', [AdminController::class,'login_admin'])->name('login
 Route::get('/search', [ChefController::class,'search']);
 Route::get('/recipesearch', [RecipeController::class,'recipesearch'])->name('recipesearch');
 Route::get('/logout', [ChefController::class,'logout'])->name('logout');
+
+Route::post('/send-message', [MessageController::class, 'send_message'])->name('send_message');

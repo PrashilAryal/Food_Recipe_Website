@@ -1,37 +1,49 @@
 @extends('layout.main')
 
 @section('content')
-<h1 class="text-center mt-5">Chef Login</h1>
+<!-- <h1 class="text-center mt-5">Chef Login</h1> -->
 {{-- @if(Session::has('fail'))
     
     <div class="alert alert-danger" role="alert">
         {{Session::get('fail')}}
 </div>
 @endif --}}
-<form action="{{route('login_chef')}}" method="POST" class="mx-auto col-6 border border-success border-3 p-3"
-    enctype="multipart/form-data">
-    @csrf
 
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">E-mail address</label>
-        <input type="email" class="form-control @error('chef_email') is-invalid @enderror" id="exampleInputEmail1"
-            name="chef_email">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        {{-- <span style="color:red;">@error ('chef_email') {{$message}} @enderror</span> --}}
-
+<section class="loginSection">
+    <div class="loginContainer">
+        <form action="{{route('login_chef')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="loginForm">
+                <h2>Login</h2>
+                @if(Session::has('fail'))
+                <div class="loginError">
+                    <span class="">{{Session::get('fail')}}</span><br>
+                </div>
+                @endif
+                {{-- @if($errors->any())
+                        <span>{{$error}}</span>
+                @endif --}}
+                <div class="loginFormBox">
+                    <div class="loginInputBox w50">
+                        <input type="email" name="chef_email" class="@error('chef_email') is-invalid @enderror"
+                            id="user_email" autocomplete="off" required>
+                        <span>Email</span>
+                        {{-- <span style="color:red;">@error ('chef_email') {{$message}} @enderror</span> --}}
+                    </div>
+                    <div class="loginInputBox w50">
+                        <input type="text" name="chef_password" class="@error('chef_password') is-invalid @enderror"
+                            id="user_password" autocomplete="off" required>
+                        <span>Password</span>
+                    </div><br>
+                    <div class="loginInputBox w50">
+                        <div class="loginButton">
+                            <input type="submit" id="login_btn" value="Login">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control @error('chef_password') is-invalid @enderror" name="chef_password">
-    </div>
-    @if(Session::has('fail'))
-    <span style="color:red;" class="">{{Session::get('fail')}}</span><br>
-    @endif
-    {{-- @if($errors->any())
-        <span>{{$error}}</span>
-    @endif --}}
-
-    <button type="submit" class="btn btn-success">Submit</button>
-</form>
+</section>
 
 @endsection

@@ -41,6 +41,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="loginOptions">
+                    <p>or</p>
+                    <h4>Sign in with</h4>
+                    <ul class="loginSocialMedia">
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <!-- <li><a href="#"><img src="{{ asset('../images/google.png') }}" alt=""></a></li> -->
+                        <!-- <li><a href="#"><img src="{{ asset('../images/facebook.png') }}" alt=""></a></li> -->
+                        <!-- <li><a href="#"><img src="{{ asset('../images/location.png') }}" alt=""></a></li> -->
+                        <!-- <li><a href="#"><img src="{{ asset('../images/location.png') }}" alt=""></a></li> -->
+                        <!-- <li><a href="#"><img src="{{ asset('../images/location.png') }}" alt=""></a></li> -->
+                    </ul>
+                </div>
             </div>
         </form>
     </div>

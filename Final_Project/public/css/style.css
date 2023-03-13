@@ -561,7 +561,7 @@ body {
 }
 .loginContainer {
     position: relative;
-    min-width: 1100px;
+    min-width: 800px;
     min-height: 550px;
     z-index: 1000;
 }
@@ -595,7 +595,7 @@ body {
     margin-right: auto;
 }
 .loginContainer .loginForm .loginFormBox .loginInputBox.w50 {
-    width: 51%;
+    width: 80%;
 }
 .loginContainer .loginForm .loginFormBox .loginInputBox input,
 .loginContainer .loginForm .loginFormBox .loginInputBox textarea {
@@ -699,4 +699,250 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.loginOptions {
+    text-align: center;
+}
+.loginSocialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.fa {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55acee;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+.getConnected {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Register */
+.registerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #095a55;
+    background-color: #305b37;
+    box-sizing: border-box;
+    height: 1010px;
+}
+.registerSection::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    height: 1010px;
+    background: #fff38e;
+    background: #eef2e6;
+}
+.registerContainer {
+    position: relative;
+    min-width: 800px;
+    min-height: 900px;
+    z-index: 1000;
+    padding-bottom: 100px;
+}
+
+.registerContainer .registerForm {
+    position: absolute;
+    padding: 70px 50px;
+    margin-left: 150px;
+    width: calc(100% - 300px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.registerContainer .registerForm h2 {
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+.registerContainer .registerForm .registerFormBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.registerContainer .registerForm .registerFormBox .registerInputBox {
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registerContainer .registerForm .registerFormBox .registerInputBox.w50 {
+    width: 80%;
+}
+.registerContainer .registerForm .registerFormBox .registerInputBox input,
+.registerContainer .registerForm .registerFormBox .registerInputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.registerContainer .registerForm .registerFormBox .registerInputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.registerContainer
+    .registerForm
+    .registerFormBox
+    .registerInputBox
+    input:focus
+    ~ span,
+.registerContainer
+    .registerForm
+    .registerFormBox
+    .registerInputBox
+    input:valid
+    ~ span,
+.registerContainer
+    .registerForm
+    .registerFormBox
+    .registerInputBox
+    textarea:focus
+    ~ span,
+.registerContainer
+    .registerForm
+    .registerFormBox
+    .registerInputBox
+    textarea:valid
+    ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+.registerContainer
+    .registerForm
+    .registerFormBox
+    .registerInputBox
+    input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: #095a55;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+.registerContainer
+    .registerForm
+    .registerFormBox
+    .registerInputBox
+    input[type="submit"]:hover {
+    background: #0d948b;
+}
+.registerButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+@media (max-width: 1200px) {
+    .registerContainer {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+    .registerContainer .registerForm {
+        position: relative;
+        width: calc(100% - 50px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+    }
+}
+@media (max-width: 991px) {
+    /* .loginSection::before {
+        display: none;
+    } */
+    .registerContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .registerContainer .registerForm {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    .registerContainer .registerForm {
+        padding: 25px;
+    }
+    .registerContainer .registerForm .registerFormBox .registerInputBox.w50 {
+        width: 100%;
+    }
+}
+.registerError {
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registerOptions {
+    text-align: center;
+}
+.registerSocialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }

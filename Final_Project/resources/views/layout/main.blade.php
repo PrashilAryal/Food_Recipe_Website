@@ -22,6 +22,10 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/about.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/6ac97bb13c.css" crossorigin="anonymous"> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -97,13 +101,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Are you a chef?
+                                Hi, Chef!
                             </a>
 
 
                             <ul class="dropdown-menu" style="z-index:9999 !important" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
-                                <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -137,33 +140,16 @@
 
         <footer class="text-center text-lg-start text-white" style="background-color: #2c5238">
 
-            <section class="d-flex justify-content-between p-4" style="background-color: #266b38">
-
-                <div class="me-5">
+            <section class="d-flex justify-content-between p-4"
+                style="background-color: #266b38; padding: 0.5rem !important;display: flex !important;justify-content: center !important;align-items: center !important;">
+                <div class="me-5 getConnected">
                     <span>Get connected with us on social networks:</span>
                 </div>
-
-
-
-                <div>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="footerSocialMedia">
+                    <a href="https://www.google.com/" class="fa fa-google"></a>
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+                    <!-- <li><a href="#"><img src="{{ asset('../images/google.png') }}" alt=""></a></li> -->
                 </div>
 
             </section>

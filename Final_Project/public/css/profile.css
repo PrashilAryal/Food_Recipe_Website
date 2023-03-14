@@ -13,6 +13,7 @@
     margin-right: auto;
     border-radius: 25px;
     padding-top: 10px;
+    object-fit: cover;
 }
 #profilePhoto {
     width: 150px;

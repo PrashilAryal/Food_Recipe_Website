@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recipe;
+use App\Models\Chef;
 use Illuminate\Http\Request;
 
 class RecipeController extends Controller
@@ -35,6 +36,11 @@ class RecipeController extends Controller
                 'chef_id' => $req->chef_id
             ]);
         }
+        $chefObj = Chef::find($req->chef_id);
+        $total = $chefObj->chef_total_recipes;
+        $chefObj->chef_total_recipes = $total+1;
+        $chefObj->save();
+
         return redirect()->route('profile');
     }
     public function recipesearch(Request $request)

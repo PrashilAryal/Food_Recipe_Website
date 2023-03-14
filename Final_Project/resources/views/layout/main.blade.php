@@ -101,7 +101,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Hi, Chef!
+                                @php
+                                $name = DB::table('chefs')->where('id',(Session::get('userid')))->first();
+                                @endphp
+
+                                Hi, {{$name->chef_name}}!
                             </a>
 
 

@@ -22,36 +22,38 @@
     height: 350px;
     object-fit: cover;
 }
+
+/* Recipe head container */
+.recipeHeadContainer {
+    margin-top: 20px;
+}
+.viewRecipeImage {
+    height: 400px;
+    margin-left: 20px;
+}
+.viewRecipeImage img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Display recipe steps */
+
 .paragraph {
-    /* font-size: 16px; */
-    line-height: 1.5;
-}
-.paragraph p {
-    margin: 0;
-    padding: 0;
-    color: black;
-}
-.paragraph .recipeStepsStyle {
+    max-width: 900px;
     font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
 }
 .instruction-list {
     text-align: center;
 }
-
-/* check */
-
-.paragraph {
-    max-width: 600px;
-    margin: 0 auto;
+.paragraph .recipeStepsStyle {
+    font-size: 16px;
 }
-
 .paragraph ol {
     list-style: none;
     padding: 0;
-}
-
-.paragraph ol li + .paragraph ol li {
-    margin-top: 1rem;
 }
 
 .paragraph ol li {
@@ -59,19 +61,21 @@
     align-items: center;
     gap: 1rem;
     background: aliceblue;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1rem;
     width: calc(100% - 2rem);
     box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+    margin-top: 5px;
+    min-height: 20px;
 }
 
 .paragraph ol li::before {
     counter-increment: list-item;
     content: counter(list-item);
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 700;
-    width: 2em;
-    height: 2em;
+    width: 2rem;
+    height: 2rem;
     background: black;
     flex: 0 0 auto;
     border-radius: 50%;
@@ -82,10 +86,10 @@
 }
 
 .paragraph ol li:nth-child(even) {
-    flex-direction: row-reverse;
     background: lavender;
-    margin-right: -2rem;
-    margin-left: 2rem;
+    /* flex-direction: row-reverse; */
+    /* margin-right: -2rem; */
+    /* margin-left: 2rem; */
 }
 .paragraph ol li:last-child {
     display: none;

@@ -90,7 +90,15 @@ class ChefController extends Controller
             if(Hash::check($req->chef_password,$chef->chef_password))
             {
                 session()->put('userid',$chef->id);
-                return redirect('/');
+                $chefCheck = Session::get('userid');
+                $data = Chef::find($chefCheck);
+                $roleCheck = $data->chef_role;
+                if($roleCheck=='chef'){
+                    return redirect('/');
+                }
+                else{
+                    return back()->with('fail','User Not Found');
+                }
             }
             else{
                 return back()->with('fail','Password not matched');

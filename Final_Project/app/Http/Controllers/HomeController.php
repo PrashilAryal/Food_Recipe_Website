@@ -52,6 +52,10 @@ class HomeController extends Controller
         $myRecipes = Recipe::all();
         return view('profile', compact('data','password', 'myRecipes'));
     }
+    public function edit_recipe($id){
+        $data = Recipe::find($id);
+        return view('editRecipe', compact('data'));
+    }
     public function about(){
         return view('about');
     }

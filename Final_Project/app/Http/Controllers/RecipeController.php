@@ -64,6 +64,26 @@ class RecipeController extends Controller
     $data = Chef::find($user);
     $password = bcrypt($data->chef_password);
     $myRecipes = Recipe::all();
+    $chefObj = Chef::find($user);
+    $total = $chefObj->chef_total_recipes;
+    $chefObj->chef_total_recipes = $total-1;
+    $chefObj->save();
+    // return redirect()->route('profile', compact('data', 'password', 'myRecipes'));
+
     return view('profile', compact('data','password', 'myRecipes'));
+  }
+  public function update_recipe(Request $req){
+        $recipeObj = Recipe::find($req->id);
+        $recipeObj->recipe_name = $req->recipe_name;
+        $recipeObj->recipe_ingredients = $req->recipe_ingredients;
+        $recipeObj->recipe_description = $req->recipe_description;
+        $recipeObj->recipe_steps = $req->recipe_steps;
+        $recipeObj->recipe_cooking_time = $req->recipe_cooking_time;
+        $recipeObj->recipe_type = $req->recipe_type;
+
+
+        $recipeObj->save();
+
+        return redirect()->route('profile');
   }
 }

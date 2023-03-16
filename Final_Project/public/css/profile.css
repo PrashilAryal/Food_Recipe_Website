@@ -323,3 +323,8 @@
     color: white;
     background-color: rgb(4, 95, 4);
 }
+.editRecipeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

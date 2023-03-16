@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard
     </title>
     <link rel="stylesheet" href="{{ URL::asset('css/adminstyle.css'); }}" />
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300;400;900&family=Fira+Sans&family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300;400;900&family=Fira+Sans&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
     <div class="container">
-      <div class="navigation">
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon"><ion-icon name="fast-food-outline"></ion-icon></span>
-              <span class="title">Chef's Kitchen </span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
-              <span class="title">Chefs</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon"
-                ><ion-icon name="people-circle-outline"></ion-icon
-              ></span>
-              <span class="title">Company</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon"
-                ><ion-icon name="settings-outline"></ion-icon
-              ></span>
-              <span class="title">Setting</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon"
-                ><ion-icon name="settings-outline"></ion-icon
-              ></span>
-              <span class="title">Help</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- main -->
-      <div class="main">
-        <div class="topbar">
-          <div class="toggle">
-            <ion-icon name="menu-outline"></ion-icon>
-          </div>
-          <!-- search -->
-          <form action="{{url('/search')}}" method="get">
-
-            <div class="search">
-              <label for="">
-                <input type="text" placeholder="Search Here" name="srch_chef"/>
-                <ion-icon name="search-outline"></ion-icon>
-              </label>
-            </div>
-          </form>
-          <!-- userImg -->
-          <div class="user">
-           <span>
-            <ion-icon name="person-circle-sharp" size="large"></ion-icon>
-
-
-           </span>
-          </div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </span>
+                        <span class="title">Chef's Kitchen </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('/view-chef')}}">
+                        <span class="icon">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </span>
+                        <span class="title">Chefs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('/view-message')}}">
+                        <span class="icon">
+                            <ion-icon name="people-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url('/logout-admin')}}">
+                        <span class="icon">
+                            <ion-icon name="logout-outline"></ion-icon>
+                        </span>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <!-- cards -->
-        {{-- <div class="cardBox">
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- search -->
+                <form action="{{url('/search')}}" method="get">
+
+                    <div class="search">
+                        <label for="">
+                            <input type="text" placeholder="Search Here" name="srch_chef" />
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                </form>
+                <!-- userImg -->
+                <div class="user">
+                    <span>
+                        <ion-icon name="person-circle-sharp" size="large"></ion-icon>
+
+
+                    </span>
+                </div>
+            </div>
+            <!-- cards -->
+            {{-- <div class="cardBox">
           <div class="card">
             <div>
               <div class="numbers">1,504</div>
@@ -117,143 +131,36 @@
             </div>
           </div>
         </div> --}}
-        <!-- order detail list -->
-        <div class="details">
-          <div class="recentorders">
-            <div class="cardHeader">
-              <h2>Chefs List</h2>
-              {{-- <a href="" class="btn">View All</a> --}}
+            <!-- order detail list -->
+            <div class="details">
+                @yield('adminContent')
             </div>
-            <table>
-              <thead>
-                <tr>
-                  <td>Chef's Name</td>
-                  <td>Chef's Email</td>
-                  <td>Total Recipe</td>
-                  <td>Action</td>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach ($chefs as $value)
-                  <tr>
-                      <td>{{ $value['chef_name']}}</td>
-                      <td>{{ $value['chef_email'] }}</td>
-                      <td>{{ $value['chef_total_recipes']}}</td>
-                      <td><a class="btn btn-danger" href="/delete/{{$value->id}}"> Delete</a></td>
-                  </tr>
-               @endforeach
-              </tbody>
-            </table>
-          </div>
-          <!-- New Customers -->
-          <div class="recentCustomers">
-            <div class="cardHeader">
-              <h2>Recent Customers</h2>
-            </div>
-            <table>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-              <tr>
-                <td width="60px">
-                  <div class="imgbox">
-                    <img src="./577734.jpg" />
-                  </div>
-                </td>
-                <td>
-                  <h4>ujwal<br /><span>Nepal</span></h4>
-                </td>
-              </tr>
-            </table>
-          </div>
         </div>
-      </div>
     </div>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-      //Menu toogle
-      let toggle = document.querySelector(".toggle");
-      let navigation = document.querySelector(".navigation");
-      let main = document.querySelector(".main");
+    //Menu toogle
+    let toggle = document.querySelector(".toggle");
+    let navigation = document.querySelector(".navigation");
+    let main = document.querySelector(".main");
 
-      toggle.onclick = function () {
+    toggle.onclick = function() {
         navigation.classList.toggle("active");
         main.classList.toggle("active");
-      };
+    };
 
-      //add hovered class in selected list item
-      let list = document.querySelectorAll(".navigation li");
-      function activelink() {
+    //add hovered class in selected list item
+    let list = document.querySelectorAll(".navigation li");
+
+    function activelink() {
         list.forEach((item) => item.classList.remove("hovered"));
         this.classList.add("hovered");
-      }
-      list.forEach((item) => item.addEventListener("mouseover", activelink));
+    }
+    list.forEach((item) => item.addEventListener("mouseover", activelink));
     </script>
-  </body>
+</body>
+
 </html>

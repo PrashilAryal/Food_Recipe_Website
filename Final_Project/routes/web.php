@@ -48,5 +48,8 @@ Route::post('/login-admin', [AdminController::class,'login_admin'])->name('login
 Route::get('/search', [ChefController::class,'search']);
 Route::get('/recipesearch', [RecipeController::class,'recipesearch'])->name('recipesearch');
 Route::get('/logout', [ChefController::class,'logout'])->name('logout');
+Route::get('/logout-admin', [AdminController::class,'logoutAdmin']);
 
 Route::post('/send-message', [MessageController::class, 'send_message'])->name('send_message');
+Route::get('/view-message', [MessageController::class, 'view_message']);
+Route::get('/view-chef', [AdminController::class, 'view_chef']);

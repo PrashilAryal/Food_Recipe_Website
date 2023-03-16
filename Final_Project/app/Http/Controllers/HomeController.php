@@ -12,14 +12,26 @@ class HomeController extends Controller
 {
     //
     public function welcome(){
+        session()->put(['adminid']);
         return view('welcome', ['recipesAll'=>Recipe::all()]);
     }
     public function register(){
         return view('register');
     }
     public function adminpanel(){
+        
+        if((Session::get('adminid')) == null){
+            return view('adminlogin');
+        }
+        $adminObj = Chef::find(Session::get('adminid'));
+       if($adminObj->chef_role == 'admin'){
         $item = Chef::all();
-        return view('adminpanel', ['chefs'=>$item]);;
+            return view('adminpanel', ['chefs'=>$item]);;
+       }else{
+            return view('adminlogin');
+
+       }
+        
     }
     public function login(){
         return view('login');

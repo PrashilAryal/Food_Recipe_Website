@@ -14,14 +14,21 @@
                 <p>{{$RecipesDetails->recipe_description}}</p>
             </div>
             <div class="Time">
-                <h5>Time</h5>
+                <h5>Cooking Time</h5>
                 <p>{{$RecipesDetails->recipe_cooking_time}}</p>
             </div>
             <div class="ingredient-list">
                 <h5>Ingredients</h5>
                 {{$RecipesDetails->recipe_ingredients}}
             </div>
-
+            @php
+            $chefId = $RecipesDetails->chef_id;
+            $chefData = DB::table('chefs')->where('id', $chefId)->first();
+            @endphp
+            <div class="chefName">
+                <h5>Recipe By</h5>
+                {{$chefData->chef_name}}
+            </div>
         </div>
     </div>
 </div>

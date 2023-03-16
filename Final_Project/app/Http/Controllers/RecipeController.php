@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Recipe;
 use App\Models\Chef;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session as Session;
+
 
 class RecipeController extends Controller
 {
@@ -52,5 +54,16 @@ class RecipeController extends Controller
                  ->get();
 
     return view('searchpage', compact('posts', 'query'));
+  }
+
+  public function delete_recipe($id){
+    $delobj = Recipe::find($id);
+    $delobj ->delete();
+    $chefs= Recipe::all();
+    $user = Session::get('userid');
+    $data = Chef::find($user);
+    $password = bcrypt($data->chef_password);
+    $myRecipes = Recipe::all();
+    return view('profile', compact('data','password', 'myRecipes'));
   }
 }

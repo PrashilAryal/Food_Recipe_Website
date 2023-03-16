@@ -157,6 +157,10 @@
                 </div>
                 <div class="post_text">
                     <!-- <span>18 July 2021 / Breakfast</span> -->
+                    <div class="recipeAction">
+                        <a href="">Edit</a>
+                        <a href="{{url('/delete-recipe/'.$row['id'])}}">Delete</a>
+                    </div>
                     <span>{{$row["recipe_name"]}}</span>
                     <!-- <a href="#" class="post_title">Click here to view full recipe</a> -->
                     <p>Ingredients: {{$row["recipe_ingredients"]}}</p>

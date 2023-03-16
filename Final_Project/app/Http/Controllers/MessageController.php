@@ -26,4 +26,8 @@ class MessageController extends Controller
         ]);
         return back()->with('success', 'Message sent successfully.');
     }
+    public function view_message(){
+        $messageData = Message::all();
+        return view('message',['messages'=>$messageData]);
+    }
 }

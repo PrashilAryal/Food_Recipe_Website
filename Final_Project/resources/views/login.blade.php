@@ -14,7 +14,7 @@
         <form action="{{route('login_chef')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="loginForm">
-                <h2>Login</h2>
+                <h2>Chef Login</h2>
                 @if(Session::has('fail'))
                 <div class="loginError">
                     <span class="">{{Session::get('fail')}}</span><br>

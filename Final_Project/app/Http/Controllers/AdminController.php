@@ -33,7 +33,9 @@ class AdminController extends Controller
                 $data = Chef::find($adminCheck);
                 $roleCheck = $data->chef_role;
                 if($roleCheck=='admin'){
-                    return redirect()->route('adminpanel');
+                    $chefs= Chef::all();
+                    return view('adminpanel',compact('chefs'));
+                    // return view('adminpanel');
                 }
                 else{
                     return back()->with('fail','User Not Found');
@@ -46,6 +48,17 @@ class AdminController extends Controller
         else{
             return back()->with('fail','User Not Found');
         }
+    }
+    public function logoutAdmin(){
+        if(Session::has('adminid')){
+            Session::pull('adminid');
+            return redirect('/');
+        } 
+    }
+
+    public function view_chef(){
+        $chefs= Chef::all();
+        return view('viewChef',compact('chefs'));
     }
    
 }

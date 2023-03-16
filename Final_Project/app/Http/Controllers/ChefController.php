@@ -97,7 +97,11 @@ class ChefController extends Controller
                     return redirect('/');
                 }
                 else{
-                    return back()->with('fail','User Not Found');
+                    // return view('login');
+                    if(Session::has('userid')){
+                        Session::pull('userid');
+                        return back()->with('fail','User Not Found');
+                    }
                 }
             }
             else{
@@ -112,7 +116,8 @@ class ChefController extends Controller
     { 
         $delobj = Chef::find($id);
         $delobj ->delete();
-        return redirect("adminpanel");
+        $chefs= Chef::all();
+        return view('viewChef',compact('chefs'));
 
     }
     public function search(Request $req)

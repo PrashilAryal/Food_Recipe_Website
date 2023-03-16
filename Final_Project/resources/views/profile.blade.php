@@ -65,7 +65,7 @@
                             <span>Ingredients required</span>
                         </div>
                         <div class="editInputBox w50">
-                            <textarea name="recipe_description" id="recipe_desccription" autocomplete="off"
+                            <textarea name="recipe_description" id="recipe_description" autocomplete="off"
                                 required></textarea>
                             <span>About the dish...</span>
                         </div>
@@ -158,7 +158,7 @@
                 <div class="post_text">
                     <!-- <span>18 July 2021 / Breakfast</span> -->
                     <div class="recipeAction">
-                        <a href="">Edit</a>
+                        <a href="{{url('/edit-recipe/'.$row['id'])}}">Edit</a>
                         <a href="{{url('/delete-recipe/'.$row['id'])}}">Delete</a>
                     </div>
                     <span>{{$row["recipe_name"]}}</span>

@@ -232,14 +232,23 @@ body {
     position: relative;
     width: 100%;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 2fr 1fr; */
     grid-gap: 30px;
     /* margin-top: 10px; */
 }
 .details .recentorders {
     position: relative;
-    display: grid;
+    /* display: grid; */
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.details .messageContainer {
+    position: relative;
+    /* display: grid; */
     min-height: 500px;
     background: var(--white);
     padding: 20px;
@@ -247,9 +256,10 @@ body {
     border-radius: 20px;
 }
 .cardHeader {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; */
+    text-align: center;
 }
 .cardHeader h2 {
     font-weight: 600;
@@ -267,6 +277,13 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    text-align: center;
+}
+.details .recentorders thead {
+    text-align: center;
+}
+.details .recentorders tbody {
+    text-align: center;
 }
 .details table thead td {
     font-weight: 600;
@@ -285,16 +302,56 @@ body {
 }
 .details .recentorders table tr td {
     padding: 10px;
+    text-align: initial;
 }
 .details .recentorders table tr td:last-child {
-    text-align: end;
+    text-align: center;
 }
 .details .recentorders table tr td:nth-child(2) {
-    text-align: end;
+    text-align: initial;
 }
 .details .recentorders table tr td:nth-child(3) {
     text-align: center;
 }
+/* admin message */
+.details .messageContainer thead {
+    text-align: center;
+}
+.details .messageContainer tbody {
+    text-align: center;
+}
+.details .messageContainer table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .messageContainer table tr:last-child {
+    border-bottom: none;
+}
+
+.details .messageContainer table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+.details .messageContainer table tr td {
+    padding: 10px;
+    text-align: initial;
+}
+.details .messageContainer table tr td:last-child {
+    text-align: initial;
+}
+.details .messageContainer table tr td:nth-child(2) {
+    text-align: initial;
+}
+.details .messageContainer table tr td:nth-child(3) {
+    text-align: initial;
+}
+.details .messageContainer table tr td:nth-child(4) {
+    text-align: initial;
+}
+/* .details .messageContainer table tr td:nth-child() {
+    text-align: initial;
+} */
+/* end admin message */
 .status.delivered {
     padding: 2px 4px;
     background: #8de02c;
@@ -400,6 +457,9 @@ body {
         grid-template-columns: repeat(1, 1fr);
     }
     .recentorders {
+        overflow-x: auto;
+    }
+    .messageContainer {
         overflow-x: auto;
     }
     .status.inprogress {

@@ -78,7 +78,7 @@
 
                     <div class="search">
                         <label for="">
-                            <input type="text" placeholder="Search Here" name="srch_chef" />
+                            <input type="text" placeholder="Search Chef" name="srch_chef" />
                             <ion-icon name="search-outline"></ion-icon>
                         </label>
                     </div>

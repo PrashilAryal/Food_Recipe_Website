@@ -36,7 +36,7 @@ foreach($chefs as $chef){
                     <h3>Chefs</h3>
                 </div>
                 <div class="flip-card-back">
-                    <p>This card shows the number of total chefs in Chef's Kitchen.</p>
+                    <p>This card shows the total number of chefs in Chef's Kitchen.</p>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ foreach($chefs as $chef){
                     <h3 class="cardRecipes">Recipes</h3>
                 </div>
                 <div class="flip-card-back">
-                    <p>This card shows the number of Veg and Non-veg recipes in Chef's Kitchen.</p>
+                    <p>This card shows the total number of Veg and Non-veg recipes in Chef's Kitchen.</p>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@ foreach($chefs as $chef){
                     <h3>Admins</h3>
                 </div>
                 <div class="flip-card-back">
-                    <p>This card shows the number of admin in Chef's Kitchen.</p>
+                    <p>This card shows the total number of admins in Chef's Kitchen.</p>
                 </div>
             </div>
         </div>

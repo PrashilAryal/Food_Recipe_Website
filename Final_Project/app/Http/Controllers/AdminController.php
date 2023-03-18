@@ -38,7 +38,6 @@ class AdminController extends Controller
                     $recipes = Recipe::all();
                     // return view('adminpanel',compact('chefs', 'data', 'recipes'));
                     return view('adminDashboard',compact('chefs', 'data', 'recipes'));
-                    // return view('adminpanel');
                 }
                 else{
                     return back()->with('fail','User Not Found');
@@ -64,7 +63,25 @@ class AdminController extends Controller
         $adminCheck = Session::get('adminid');
         $data = Chef::find($adminCheck);
         return view('viewChef',compact('chefs', 'data'));
-        // return view('viewChef',compact('chefs'));
+    }
+
+    public function edit_admin(Request $req){
+        $adminObj = Chef::find($req->id);
+        $adminObj->chef_name = $req->chef_name;
+        $adminObj->chef_address = $req->chef_address;
+        $adminObj->chef_email = $req->chef_email;
+        $adminObj->chef_phone_num = $req->chef_phone_num;
+        if($req->chef_password==NULL){
+            $adminObj->save();
+        }else{
+            $hashpass = Hash::make($req->chef_password);
+            $adminObj->chef_password = $hashpass;
+            $adminObj->save();
+        }
+        $chefs = Chef::all();
+        $recipes = Recipe::all();
+        $data = Chef::find(Session::get('adminid'));
+        return view('adminSetting', compact('chefs', 'data', 'recipes'));
     }
    
 }

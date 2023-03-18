@@ -8,6 +8,7 @@
     <title>Admin Dashboard
     </title>
     <link rel="stylesheet" href="{{ URL::asset('css/adminstyle.css'); }}" />
+    <link rel="stylesheet" href="{{ asset('css/recipe.css') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300;400;900&family=Fira+Sans&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet" />
@@ -55,7 +56,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{url('/admin-setting')}}">
                         <span class="icon">
                             <!-- <ion-icon name="settings-outline"></ion-icon> -->
                             <i class="fa-solid fa-gear"></i>

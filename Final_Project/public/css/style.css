@@ -946,3 +946,30 @@ body {
     align-items: center;
     padding: 0;
 }
+
+/* main login page */
+.mainLoginBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.mainLoginCard {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+}
+.mainLoginCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(22, 165, 86, 0.61);
+}
+.maginLoginContainer {
+    padding: 2px 16px;
+}
+/* end main login page */

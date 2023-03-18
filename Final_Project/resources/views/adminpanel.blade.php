@@ -20,7 +20,7 @@
         <div class="navigation">
             <!-- <li> -->
             <div class="adminLogo">
-                <a href="{{url('/adminpanel')}}">
+                <a href="{{url('/adminDashboard')}}">
                     <img src="{{asset('images/logo.png')}}" alt="logo">
                     <!-- <span class="icon">
                         <ion-icon name="fast-food-outline"></ion-icon>
@@ -30,6 +30,14 @@
             </div>
             <!-- </li> -->
             <ul>
+                <li>
+                    <a href="{{url('/adminDashboard')}}">
+                        <span class="icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
                 <li>
                     <a href="{{url('/view-chef')}}">
                         <span class="icon">

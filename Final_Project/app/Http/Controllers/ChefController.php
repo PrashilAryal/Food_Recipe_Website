@@ -133,7 +133,6 @@ class ChefController extends Controller
             return redirect('/');
             
         }
-    }
-    
-    
+    } 
+
 }

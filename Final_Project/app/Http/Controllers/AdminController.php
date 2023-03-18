@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Models\Chef;
+use App\Models\Recipe;
 use Illuminate\Support\Facades\Session as Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -34,7 +35,9 @@ class AdminController extends Controller
                 $roleCheck = $data->chef_role;
                 if($roleCheck=='admin'){
                     $chefs= Chef::all();
-                    return view('adminpanel',compact('chefs', 'data'));
+                    $recipes = Recipe::all();
+                    // return view('adminpanel',compact('chefs', 'data', 'recipes'));
+                    return view('adminDashboard',compact('chefs', 'data', 'recipes'));
                     // return view('adminpanel');
                 }
                 else{

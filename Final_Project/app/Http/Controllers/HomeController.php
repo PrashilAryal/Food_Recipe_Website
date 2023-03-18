@@ -12,8 +12,12 @@ class HomeController extends Controller
 {
     //
     public function welcome(){
-        session()->put(['adminid']);
-        return view('welcome', ['recipesAll'=>Recipe::all()]);
+        // session()->put(['adminid']);
+        $admin = Session::get('adminid');
+        $data = Chef::find($admin);
+        $recipesAll = Recipe::all();
+        // return view('welcome', ['recipesAll'=>Recipe::all()]);
+        return view('welcome', compact('data', 'recipesAll'));
     }
     public function register(){
         return view('register');

@@ -46,8 +46,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    @if(empty(Session::get('userid')))
-
+                    @if((Session::get('adminid'))!=NULL)
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
@@ -64,25 +63,49 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Join Chef's Kitchen
+                                @php
+                                $name = DB::table('chefs')->where('id',(Session::get('adminid')))->first();
+                                @endphp
+
+                                Hi, {{$name->chef_name}}!
                             </a>
 
 
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{route('mainlogin')}}">Login</a></li>
-                                <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-
-
-
+                            <ul class="dropdown-menu" style="z-index:9999 !important" aria-labelledby="navbarDropdown">
+                                <!-- <li><a class="dropdown-item" href="{{route('logoutAdmin')}}">Logout</a></li> -->
+                                <li><a class="dropdown-item" href="{{route('adminDashboard')}}">Dashboard</a></li>
                             </ul>
 
 
                         </li>
                     </ul>
 
+                    @elseif(empty(Session::get('userid')))
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('AboutPage')}}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('contactPage')}}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('recipePage')}}">Recipe</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Join Us
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{route('mainlogin')}}">Login</a></li>
+                                <li><a class="dropdown-item" href="{{route('register')}}">Register new Account</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
                     @else
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3">
@@ -123,7 +146,6 @@
 
                         </li>
                     </ul>
-
 
                     @endif
                     <form class="d-flex" method="GET" action="{{route('recipesearch')}}">

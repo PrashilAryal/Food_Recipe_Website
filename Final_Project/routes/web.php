@@ -30,8 +30,8 @@ Route::get('/mainlogin',[HomeController::class, 'mainlogin'])->name('mainlogin')
 Route::get('/adminlogin', [HomeController::class, 'adminlogin'])->name('adminlogin');
 Route::get('/adminpanel', [HomeController::class, 'adminpanel'])->name('adminpanel');
 Route::get('/adminDashboard', [HomeController::class, 'adminDashboard'])->name('adminDashboard');
-
-
+Route::get('/admin-setting', [HomeController::class, 'adminSetting'])->name('adminSetting');
+Route::post('/edit-admin', [AdminController::class, 'edit_admin'])->name('edit_admin');
 
 Route::post('/save-recipe', [RecipeController::class, 'save_recipe'])->name('save_recipe');
 

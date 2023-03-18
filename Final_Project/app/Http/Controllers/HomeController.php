@@ -59,6 +59,12 @@ class HomeController extends Controller
         // // return view('adminDashboard', ['chefs'=>$item], ['data'=>$adminObj], ['recipes'=>$recipeList]);
         // return view('adminDashboard', compact('chefs', 'data', 'recipes'));
     }
+    public function adminSetting(){
+        $chefs = Chef::all();
+        $recipes = Recipe::all();
+        $data = Chef::find(Session::get('adminid'));
+        return view('adminSetting', compact('chefs', 'data', 'recipes'));
+    }
     public function login(){
         return view('login');
     }

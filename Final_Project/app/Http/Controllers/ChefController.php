@@ -27,9 +27,14 @@ class ChefController extends Controller
         $chefObj->chef_address = $req->chef_address;
         $chefObj->chef_email = $req->chef_email;
         $chefObj->chef_phone_num = $req->chef_phone_num;
-        $chefObj->chef_password = $req->chef_password;
+        if($req->chef_password==NULL){
+            $chefObj->save();
+        }else{
+            $hashpass = Hash::make($req->chef_password);
+            $chefObj->chef_password = $hashpass;
+            $chefObj->save();
+        }
 
-        $chefObj->save();
 
         return redirect()->route('profile');
     }

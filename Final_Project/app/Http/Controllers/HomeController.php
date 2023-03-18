@@ -24,14 +24,40 @@ class HomeController extends Controller
             return view('adminlogin');
         }
         $adminObj = Chef::find(Session::get('adminid'));
+        $data = Chef::find(Session::get('adminid'));
        if($adminObj->chef_role == 'admin'){
-        $item = Chef::all();
-            return view('adminpanel', ['chefs'=>$item], ['data'=>$adminObj]);;
+        // $item = Chef::all();
+        $chefs = Chef::all();
+        $recipes = Recipe::all();
+            // return view('adminpanel', ['chefs'=>$item], ['data'=>$adminObj], ['recipes'=>$recipeList]);
+            return view('adminDashboard', compact('chefs', 'data', 'recipes'));
+
        }else{
             return view('adminlogin');
+       }   
+    }
+    public function adminDashboard(){
 
-       }
-        
+        if((Session::get('adminid')) == null){
+            return view('adminlogin');
+        }
+        $adminObj = Chef::find(Session::get('adminid'));
+        $data = Chef::find(Session::get('adminid'));
+        // $item = Chef::all();
+        if($adminObj->chef_role == 'admin'){
+        // $item = Chef::all();
+        $chefs = Chef::all();
+        $recipes = Recipe::all();
+            // return view('adminpanel', ['chefs'=>$item], ['data'=>$adminObj], ['recipes'=>$recipeList]);
+            return view('adminDashboard', compact('chefs', 'data', 'recipes'));
+
+       }else{
+            return view('adminlogin');
+       }  
+        // $chefs = Chef::all();
+        // $recipes = Recipe::all();
+        // // return view('adminDashboard', ['chefs'=>$item], ['data'=>$adminObj], ['recipes'=>$recipeList]);
+        // return view('adminDashboard', compact('chefs', 'data', 'recipes'));
     }
     public function login(){
         return view('login');

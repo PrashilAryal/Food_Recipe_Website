@@ -29,6 +29,7 @@ Route::get('/ViewRecipe/{recipeid}',[HomeController::class, 'ViewRecipe'])->name
 Route::get('/mainlogin',[HomeController::class, 'mainlogin'])->name('mainlogin');
 Route::get('/adminlogin', [HomeController::class, 'adminlogin'])->name('adminlogin');
 Route::get('/adminpanel', [HomeController::class, 'adminpanel'])->name('adminpanel');
+Route::get('/adminDashboard', [HomeController::class, 'adminDashboard'])->name('adminDashboard');
 
 
 

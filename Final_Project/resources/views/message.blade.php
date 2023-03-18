@@ -15,6 +15,7 @@
                 <td>Subject</td>
                 <td>Message</td>
                 <td>Email</td>
+                <td>Action</td>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                 <td>{{$message->user_subject}}</td>
                 <td>{{$message->user_message}}</td>
                 <td>{{$message->user_email}}</td>
+                <td><a class="btn btn-danger" href="/delete-message/{{$message->id}}"> Delete</a></td>
             </tr>
             @endforeach
         </tbody>

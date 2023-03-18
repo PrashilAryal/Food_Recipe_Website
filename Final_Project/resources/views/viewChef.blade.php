@@ -10,20 +10,24 @@
     <table>
         <thead>
             <tr>
-                <td>Chef's Name</td>
-                <td>Chef's Email</td>
+                <td>SN</td>
+                <td>Name</td>
+                <td>Email</td>
                 <td>Total Recipe</td>
                 <td>Action</td>
             </tr>
         </thead>
         <tbody>
-            @foreach ($chefs as $value)
+            @foreach ($chefs as $key => $value)
+            @if($value['chef_role']=='chef')
             <tr>
+                <td>{{$key+1}}</td>
                 <td>{{ $value['chef_name']}}</td>
                 <td>{{ $value['chef_email'] }}</td>
                 <td>{{ $value['chef_total_recipes']}}</td>
                 <td><a class="btn btn-danger" href="/delete/{{$value->id}}"> Delete</a></td>
             </tr>
+            @endif
             @endforeach
         </tbody>
     </table>

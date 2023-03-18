@@ -37,6 +37,7 @@ Route::post('/save-recipe', [RecipeController::class, 'save_recipe'])->name('sav
 Route::get('edit/{id}', [ChefController::class, 'edit']);
 Route::post('/update-chef', [ChefController::class, 'update_chef'])->name('update_chef');
 Route::get('/delete/{id}', [ChefController::class,'deldata']);
+Route::get('/delete-message/{id}', [MessageController::class,'delete_message']);
 Route::get('/delete-recipe/{id}', [RecipeController::class,'delete_recipe']);
 Route::get('/edit-recipe/{id}', [HomeController::class,'edit_recipe'])->name('edit_recipe');
 Route::post('/update-recipe', [RecipeController::class,'update_recipe'])->name('update_recipe');

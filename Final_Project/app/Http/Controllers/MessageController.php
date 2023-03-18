@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chef;
 use App\Models\Message;
+use Illuminate\Support\Facades\Session as Session;
 use Illuminate\Http\Request;
 
 use Illuminate\Session\Store;
@@ -27,7 +29,20 @@ class MessageController extends Controller
         return back()->with('success', 'Message sent successfully.');
     }
     public function view_message(){
-        $messageData = Message::all();
-        return view('message',['messages'=>$messageData]);
+        $messages = Message::all();
+        $adminCheck = Session::get('adminid');
+        $data = Chef::find($adminCheck);
+        return view('message',compact('data', 'messages'));
+        // return view('message',['messages'=>$messageData]);
+    }
+    public function delete_message($id)
+    { 
+        $delobj = Message::find($id);
+        $delobj ->delete();
+        $messages= Message::all();
+        $adminCheck = Session::get('adminid');
+        $data = Chef::find($adminCheck);
+        return view('message',compact('data','messages'));
+
     }
 }

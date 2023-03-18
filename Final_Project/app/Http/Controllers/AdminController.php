@@ -34,7 +34,7 @@ class AdminController extends Controller
                 $roleCheck = $data->chef_role;
                 if($roleCheck=='admin'){
                     $chefs= Chef::all();
-                    return view('adminpanel',compact('chefs'));
+                    return view('adminpanel',compact('chefs', 'data'));
                     // return view('adminpanel');
                 }
                 else{
@@ -58,7 +58,10 @@ class AdminController extends Controller
 
     public function view_chef(){
         $chefs= Chef::all();
-        return view('viewChef',compact('chefs'));
+        $adminCheck = Session::get('adminid');
+        $data = Chef::find($adminCheck);
+        return view('viewChef',compact('chefs', 'data'));
+        // return view('viewChef',compact('chefs'));
     }
    
 }

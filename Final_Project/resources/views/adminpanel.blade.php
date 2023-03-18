@@ -56,6 +56,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{url('/')}}">
+                        <span class="icon">
+                            <i class="fa-solid fa-left-long"></i>
+                        </span>
+                        <span class="title">Go to website</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{url('/admin-setting')}}">
                         <span class="icon">
                             <!-- <ion-icon name="settings-outline"></ion-icon> -->

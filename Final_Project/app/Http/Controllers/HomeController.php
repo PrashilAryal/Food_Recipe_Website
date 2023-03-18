@@ -26,7 +26,7 @@ class HomeController extends Controller
         $adminObj = Chef::find(Session::get('adminid'));
        if($adminObj->chef_role == 'admin'){
         $item = Chef::all();
-            return view('adminpanel', ['chefs'=>$item]);;
+            return view('adminpanel', ['chefs'=>$item], ['data'=>$adminObj]);;
        }else{
             return view('adminlogin');
 

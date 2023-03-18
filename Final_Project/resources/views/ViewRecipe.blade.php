@@ -19,7 +19,7 @@
             </div>
             <div class="ingredient-list">
                 <h5>Ingredients</h5>
-                {{$RecipesDetails->recipe_ingredients}}
+                <p>{{$RecipesDetails->recipe_ingredients}}</p>
             </div>
             @php
             $chefId = $RecipesDetails->chef_id;
@@ -27,7 +27,7 @@
             @endphp
             <div class="chefName">
                 <h5>Recipe By</h5>
-                {{$chefData->chef_name}}
+                <p>{{$chefData->chef_name}}</p>
             </div>
         </div>
     </div>

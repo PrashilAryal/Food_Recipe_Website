@@ -11,24 +11,29 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300;400;900&family=Fira+Sans&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/6ac97bb13c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="navigation">
+            <!-- <li> -->
+            <div class="adminLogo">
+                <a href="{{url('/adminpanel')}}">
+                    <img src="{{asset('images/logo.png')}}" alt="logo">
+                    <!-- <span class="icon">
+                        <ion-icon name="fast-food-outline"></ion-icon>
+                    </span> -->
+                    <!-- <span class="title">Chef's Kitchen</span> -->
+                </a>
+            </div>
+            <!-- </li> -->
             <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="fast-food-outline"></ion-icon>
-                        </span>
-                        <span class="title">Chef's Kitchen </span>
-                    </a>
-                </li>
                 <li>
                     <a href="{{url('/view-chef')}}">
                         <span class="icon">
-                            <ion-icon name="logo-apple"></ion-icon>
+                            <i class="fa-solid fa-user"></i>
                         </span>
                         <span class="title">Chefs</span>
                     </a>
@@ -36,7 +41,7 @@
                 <li>
                     <a href="{{url('/view-message')}}">
                         <span class="icon">
-                            <ion-icon name="people-circle-outline"></ion-icon>
+                            <i class="fa fa-envelope"></i>
                         </span>
                         <span class="title">Message</span>
                     </a>
@@ -44,23 +49,17 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <ion-icon name="settings-outline"></ion-icon>
+                            <!-- <ion-icon name="settings-outline"></ion-icon> -->
+                            <i class="fa-solid fa-gear"></i>
                         </span>
                         <span class="title">Setting</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="settings-outline"></ion-icon>
-                        </span>
-                        <span class="title">Help</span>
-                    </a>
-                </li>
+
                 <li>
                     <a href="{{url('/logout-admin')}}">
                         <span class="icon">
-                            <ion-icon name="logout-outline"></ion-icon>
+                            <i class="fa fa-right-from-bracket"></i>
                         </span>
                         <span class="title">Logout</span>
                     </a>
@@ -79,17 +78,20 @@
                     <div class="search">
                         <label for="">
                             <input type="text" placeholder="Search Chef" name="srch_chef" />
-                            <ion-icon name="search-outline"></ion-icon>
+                            <!-- <ion-icon name="search-outline"></ion-icon> -->
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </label>
                     </div>
                 </form>
                 <!-- userImg -->
-                <div class="user">
-                    <span>
-                        <ion-icon name="person-circle-sharp" size="large"></ion-icon>
-
-
-                    </span>
+                <div class="adminTopName">
+                    <h3>{{$data->chef_name}}</h3>
+                    <div class="user">
+                        <span>
+                            <img src="{{asset('storage/'.$data->chef_profile_photo)}}" alt="">
+                            <!-- <ion-icon name="person-circle-sharp" size="large"></ion-icon> -->
+                        </span>
+                    </div>
                 </div>
             </div>
             <!-- cards -->

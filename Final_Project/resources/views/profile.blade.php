@@ -161,11 +161,13 @@
                         <a href="{{url('/edit-recipe/'.$row['id'])}}">Edit</a>
                         <a href="{{url('/delete-recipe/'.$row['id'])}}">Delete</a>
                     </div>
-                    <span>{{$row["recipe_name"]}}</span>
+                    <span>
+                        <h2>{{$row["recipe_name"]}}<h2>
+                    </span>
                     <!-- <a href="#" class="post_title">Click here to view full recipe</a> -->
-                    <p>Ingredients: {{$row["recipe_ingredients"]}}</p>
-                    <p>Description: {{$row["recipe_description"]}}</p>
-                    <a href="{{url('ViewRecipe/' . $row["id"])}}">Read More</a>
+                    <!-- <p>Ingredients: {{$row["recipe_ingredients"]}}</p> -->
+                    <h5>{{$row["recipe_description"]}}</h5>
+                    <a href="{{url('ViewRecipe/' . $row["id"])}}">Read More...</a>
                 </div>
             </div>
             <?php

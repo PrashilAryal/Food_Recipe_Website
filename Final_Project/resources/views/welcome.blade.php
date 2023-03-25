@@ -96,7 +96,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-heading">
-                    <h3>The Best Recipes</h3>
+                    <h3 id="best">The Best Recipes</h3>
                 </div>
             </div>
         </div>
@@ -155,7 +155,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-heading">
-                    <h3>Veg Recipes</h3>
+                    <h3 id="veg">Veg Recipes</h3>
                 </div>
             </div>
         </div>
@@ -163,7 +163,7 @@
 
         <div class="row">
             <?php
-                $servername = "localhost:3306";
+                $servername = "localhost:3307";
                 $username = "root";
                 $password = "";
                 $dbname = "chefs_kitchen";

@@ -190,8 +190,8 @@
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p class="text-white">
                                 Chef's Kitchen is optimized for the best cooking enthusiast's interests.
-                                While using this site, you agree to have read and accepted our <a href="#">terms of
-                                    use</a>, <a href="#">cookie and privacy policy.</a>
+                                While using this site, you agree to have read and accepted our <a href="{{route('tos')}}">terms of
+                                    use</a>, <a href="{{route('cookie')}}">cookie and privacy policy.</a>
                             </p>
                         </div>
 
@@ -200,16 +200,16 @@
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                <a href="#!" class="text-white">Our Best Recipies</a>
+                                <a href="#best" class="text-white text-decoration-none">Our Best Recipies</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">Veggie Products</a>
+                                <a href="#veg" class="text-white text-decoration-none">Veggie Products</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">Dairy Products</a>
+                                <a href="#!" class="text-white text-decoration-none">Dairy Products</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">Chef's Recommendation</a>
+                                <a href="#!" class="text-white text-decoration-none">Chef's Recommendation</a>
                             </p>
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -217,16 +217,16 @@
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                <a href="{{route('profile')}}" class="text-white">Your Account</a>
+                                <a href="{{route('profile')}}" class="text-white text-decoration-none">Your Account</a>
                             </p>
                             <p>
-                                <a href="{{route('AboutPage')}}" class="text-white">About Us</a>
+                                <a href="{{route('AboutPage')}}" class="text-white text-decoration-none">About Us</a>
                             </p>
                             <p>
-                                <a href="{{route('contactPage')}}" class="text-white">Contact</a>
+                                <a href="{{route('contactPage')}}" class="text-white text-decoration-none">Contact</a>
                             </p>
                             <p>
-                                <a href="{{route('recipePage')}}" class="text-white">Recipe</a>
+                                <a href="{{route('recipePage')}}" class="text-white text-decoration-none">Recipe</a>
                             </p>
                         </div>
 
@@ -254,7 +254,19 @@
 
     </div>
 
-
+    <script>
+        $(document).ready(function() {
+         $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+         if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+});
+    </script>
 </body>
 
 </html>

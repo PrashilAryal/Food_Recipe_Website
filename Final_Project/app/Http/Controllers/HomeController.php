@@ -106,4 +106,10 @@ class HomeController extends Controller
         $RecipesDetails = Recipe::find($recipeid);
         return view('ViewRecipe',compact('RecipesDetails'));
     }
+    public function tos(){
+        return view('tos');
+    }
+    public function cookie(){
+        return view('cookie');
+    }
 }

@@ -133,7 +133,7 @@
         </div>
         <div class="post_container">
             <?php
-                $servername = "localhost:3306";
+                $servername = "localhost:3307";
                 $username = "root";
                 $password = "";
                 $dbname = "chefs_kitchen";

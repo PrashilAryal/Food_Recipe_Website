@@ -586,6 +586,16 @@ body {
     font-size: 20px;
     padding: 0 10px 0 10px;
 }
+.flip-card-back .recipesCount .recipeCount {
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+}
+.flip-card-back .recipeCount p {
+    font-size: 50px;
+}
+.flip-card-back h3 {
+    margin-bottom: 0.3rem;
+}
 .flip-card-front h3 {
     margin-bottom: 0.3rem;
 }

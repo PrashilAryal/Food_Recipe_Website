@@ -141,7 +141,7 @@
                     <p>A vegetarian diet does not include any meat, poultry, or seafood. It is a meal plan made up of
                         foods that come mostly from plants. A well-planned vegetarian diet can meet your nutrition
                         needs. Reducing the amount of meat in your diet may improve your health.</p>
-                    <a href="#" class="chef-btn">Discover veg dishes</a>
+                    <a href="#veg" class="chef-btn">Discover veg dishes</a>
                 </div>
             </div>
         </div>
@@ -163,7 +163,7 @@
 
         <div class="row">
             <?php
-                $servername = "localhost:3307";
+                $servername = "localhost";
                 $username = "root";
                 $password = "";
                 $dbname = "chefs_kitchen";

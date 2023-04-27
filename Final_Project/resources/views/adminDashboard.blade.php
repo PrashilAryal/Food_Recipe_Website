@@ -56,7 +56,17 @@ foreach($chefs as $chef){
                     <h3 class="cardRecipes">Recipes</h3>
                 </div>
                 <div class="flip-card-back">
-                    <p>This card shows the total number of Veg and Non-veg recipes in Chef's Kitchen.</p>
+                    <!-- <p>This card shows the total number of Veg and Non-veg recipes in Chef's Kitchen.</p> -->
+                    <div class="recipesCount">
+                        <div class="recipeCount">
+                            <p>{{$nonVegCount}}</p>
+                            <h5>Non-veg</h5>
+                        </div>
+                        <div class="recipeCount">
+                            <p>{{$vegCount}}</p>
+                            <h5>Veg</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

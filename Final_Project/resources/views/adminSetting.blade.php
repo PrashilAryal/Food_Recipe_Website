@@ -29,7 +29,7 @@
                             <span>Email</span>
                         </div>
                         <div class="editRecipeInputBox w50">
-                            <input type="text" name="chef_password" id="chef_password"
+                            <input type="password" name="chef_password" id="chef_password"
                                 placeholder="New Password(leave it if you don't want to change)" autocomplete="off">
                             <span>Password</span>
                         </div>

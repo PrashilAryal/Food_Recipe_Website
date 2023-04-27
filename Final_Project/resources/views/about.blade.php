@@ -2,8 +2,9 @@
 @section('content')
 
 <!-- bradcam_area_start -->
-<div class="bradcam_area breadcam_bg_1 overlay" style="background-image: url('{{asset('img/aboutrestaurant.jpg')}}');">
-    <h3>about</h3>
+<div class="bradcam_area breadcam_bg_1 overlay"
+    style="background-image: url('{{asset('img/aboutUsBackground.jpg')}}');">
+    <h3>about us</h3>
 </div>
 <!-- bradcam_area_end -->
 <!-- about_area_start -->
@@ -13,7 +14,7 @@
             <div class="col-xl-6 col-lg-6 col-md-6">
                 <div class="about_thumb2">
                     <div class="img_1">
-                        <img src="{{asset('img/about/sant.jpg')}}" alt="">
+                        <img src="{{asset('img/about/aboutUsPage.jpg')}}" alt="">
                     </div>
 
                 </div>
@@ -25,7 +26,7 @@
 
                         </h3>
                     </div>
-                    <p>Avision is a lifestyle brand that focuses on the Nepalese culture.
+                    <!-- <p>Avision is a lifestyle brand that focuses on the Nepalese culture.
                         Being a player in the Nepali consumer electronics setting.
                         We understand the importance of providing a quality product at affordable price.
 
@@ -34,9 +35,19 @@
                         SWEET in terms of prices. Our Visions is to be in the homes of every Juan Like an ordinary
                         nepali, We focus and Strive to bring our vision to reality. Avision - "Bring your vision to
                         life"
-                    </p>
+                    </p> -->
+                    <p>Welcome to Chef's Kitchen, your ultimate online destination for delicious and easy-to-follow food
+                        recipes! Our website is dedicated to help you explore the world of cooking and make the most out
+                        of your time in the kitchen. We believe that cooking should be a fun and enjoyable experience.
+                        That's why we've curated a wide selection of recipes from all over the world that are both easy
+                        to make and incredibly tasty. From classic comfort foods to healthy meal options, our recipes
+                        cater to a variety of tastes and preferences. Our team of experienced chefs and food bloggers
+                        work tirelessly to create and test new recipes, so you can be sure that every dish you make from
+                        our website will turn out perfectly. Whether you're a seasoned home cook or just starting out,
+                        Chef's Kitchen has something for everyone. So why wait? Browse our collection of recipes today
+                        and start cooking up a storm in your own kitchen!</p>
                     <div class="img_thumb">
-                        <img src="{{asset('img/chandra.png')}}" alt="">
+                        <!-- <img src="{{asset('img/chandra.png')}}" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -115,7 +126,9 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="single_testmonial text-center">
-                                    <p>“Hello</p>
+                                    <p>"I am a student living in kathmandu. I don't know how to cook but this site has
+                                        made me a mini chef. With the help of this site, I would love to cook anytime."
+                                    </p>
                                     <div class="testmonial_author">
                                         <div class="thumb">
                                             <img src="img/testmonial/ka.png" alt="">
@@ -127,11 +140,12 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
                     <div class="single_carousel">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="single_testmonial text-center">
-                                    <p>“one of the best cook</p>
+                                    <p>"I love the clean UI of this website. No ads, No unnecessary contents."</p>
                                     <div class="testmonial_author">
                                         <div class="thumb">
                                             <img src="img/testmonial/1.png" alt="">
@@ -143,11 +157,13 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
                     <div class="single_carousel">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="single_testmonial text-center">
-                                    <p>“good</p>
+                                    <p>"This website is really awesome. I can cook variety of foods seeing the recipes.
+                                        Also I can try foods from all the world at my own kitchen."</p>
                                     <div class="testmonial_author">
                                         <div class="thumb">
                                             <img src="img/testmonial/3.png" alt="">
@@ -224,9 +240,9 @@
                         <h3 class="footer_title pos_margin">
                             Kathmandu
                         </h3>
-                        <p>5th floor, sundhara road, <br>
-                            bg mall <br>
-                            <a href="#">info@jimbo.com</a>
+                        <p>5th floor, MBO Plaza <br>
+                            Darbarmarg <br>
+                            <a href="#">ktmkitchen@gmail.com</a>
                         </p>
                         <a class="number" href="#">983787654</a>
 
@@ -235,11 +251,11 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget text-center ">
                         <h3 class="footer_title pos_margin">
-                            syangjha
+                            Pokhara
                         </h3>
-                        <p>2st floor, prithivi road, <br>
-                            civilmall <br>
-                            <a href="#">info@jimbo.com</a>
+                        <p>2nd floor, City Home <br>
+                            Birauta <br>
+                            <a href="#">ktmkitchen@gmail.com</a>
                         </p>
                         <a class="number" href="#">97483 6782</a>
 
@@ -248,13 +264,13 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="footer_widget text-center ">
                         <h3 class="footer_title pos_margin">
-                            chitwan
+                            Syangja
                         </h3>
-                        <p>2st floor, corner road, <br>
-                            ctcmall <br>
-                            <a href="#">info@jimbo.com</a>
+                        <p>3rd floor, Horizon <br>
+                            Jaisidanda <br>
+                            <a href="#">ktmkitchen@gmail.com</a>
                         </p>
-                        <a class="number" href="#">97483 6782</a>
+                        <a class="number" href="#">97438 7628</a>
 
                     </div>
                 </div>
@@ -295,7 +311,7 @@
                             Copyright &copy;<script>
                             document.write(new Date().getFullYear());
                             </script> All rights reserved<i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="https://colorlib.com" target="_blank">codedevil</a>
+                                href="https://prashilaryal.com" target="_blank">codeDevil</a>
 
                         </p>
                     </div>

@@ -25,7 +25,7 @@
                         {{-- <span style="color:red;">@error ('chef_email') {{$message}} @enderror</span> --}}
                     </div>
                     <div class="loginInputBox w50">
-                        <input type="text" name="chef_password" class="@error('chef_password') is-invalid @enderror"
+                        <input type="password" name="chef_password" class="@error('chef_password') is-invalid @enderror"
                             id="user_password" autocomplete="off" required>
                         <span>Password</span>
                     </div><br>
